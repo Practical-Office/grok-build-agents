@@ -27,13 +27,14 @@
         <section class="hero">
           <span class="status-chip">Pre-requisite · hard gate · ~25–35 min</span>
           <h1>Setup</h1>
-          <p class="hero-lede">Install Grok Build, sign in, and prove it works. Do not start Module 1 until this page is complete.</p>
+          <p class="hero-lede">Install Grok Build locally, sign in, and prove Plan Mode works. Do not start Module 1 until this page is complete.</p>
         </section>
 
         <div class="hard-truth">
           <h3>Hard gate</h3>
-          <p>You must finish every step below and confirm the checklist at the end. If install fails, stop and get help. Do not skip ahead.</p>
+          <p>Finish every step below. If anything fails, stop and get help. Do not start Module 1 until the checklist is complete.</p>
         </div>
+
         <div class="section-card">
           <p class="eyebrow">What you need</p>
           <ul>
@@ -44,55 +45,79 @@
           </ul>
           <p>You do <strong>not</strong> need to know how to code.</p>
         </div>
+
         <div class="section-card">
-          <p class="eyebrow">Exact steps</p>
-          <h3>1. Open a terminal</h3>
+          <p class="eyebrow">Where everything happens</p>
           <ul>
-            <li><strong>macOS:</strong> Cmd + Space → type <code>Terminal</code> → Enter</li>
-            <li><strong>Windows:</strong> PowerShell or Git Bash</li>
-            <li><strong>Linux:</strong> Terminal app</li>
+            <li><strong>Terminal</strong> = the place you type install commands and start Grok (Terminal on Mac, PowerShell on Windows).</li>
+            <li><strong>Grok Build CLI</strong> = the interactive session that starts after you type <code>grok</code>. All agent work happens inside this session.</li>
+            <li><strong>Your folder</strong> = a folder on your computer where Grok is allowed to create files.</li>
           </ul>
         </div>
+
         <div class="section-card">
-          <h3>2. Install Grok Build</h3>
-          <p><strong>macOS / Linux / Git Bash:</strong></p>
+          <h3>1. Open a terminal</h3>
+          <ul>
+            <li><strong>macOS:</strong> Press Cmd + Space, type <code>Terminal</code>, press Enter.</li>
+            <li><strong>Windows:</strong> Open PowerShell (or Git Bash if you have it).</li>
+            <li><strong>Linux:</strong> Open your Terminal app.</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <h3>2. Install Grok Build (in the terminal)</h3>
+          <p><strong>macOS / Linux / Git Bash — paste this:</strong></p>
           <pre><code>curl -fsSL https://x.ai/cli/install.sh | bash</code></pre>
-          <p><strong>Windows PowerShell:</strong></p>
+          <p><strong>Windows PowerShell — paste this:</strong></p>
           <pre><code>irm https://x.ai/cli/install.ps1 | iex</code></pre>
         </div>
+
         <div class="section-card">
-          <h3>3. Check the install</h3>
+          <h3>3. Check the install (in the terminal)</h3>
           <pre><code>grok --version</code></pre>
           <p>You should see a version number. If you do not, stop and get help.</p>
         </div>
+
         <div class="section-card">
-          <h3>4. Sign in</h3>
+          <h3>4. Create a practice folder (in the terminal)</h3>
+          <pre><code>mkdir -p ~/grok-practice
+cd ~/grok-practice
+pwd</code></pre>
+          <p>Stay in this folder for the rest of Setup.</p>
+        </div>
+
+        <div class="section-card">
+          <h3>5. Start Grok Build (in the terminal, inside the practice folder)</h3>
+          <pre><code>grok</code></pre>
           <ol>
-            <li>Type <code>grok</code> and press Enter.</li>
             <li>Sign in in the browser that opens.</li>
-            <li>Return to the terminal — you should see the Grok interface.</li>
+            <li>Return to the terminal — you should see the Grok Build interface.</li>
           </ol>
+          <p>From this point, paste into the <strong>Grok Build CLI</strong>.</p>
         </div>
+
         <div class="section-card">
-          <h3>5. Run the official short tour</h3>
+          <h3>6. Run the official short tour (inside Grok Build CLI)</h3>
           <pre><code>/tour</code></pre>
-          <p>Walk through the tips. Required.</p>
         </div>
+
         <div class="section-card">
-          <h3>6. First proof it works (Plan Mode required)</h3>
-          <p>Copy and paste this exact request:</p>
-          <pre><code>Create a file called hello.txt that contains the sentence: Grok Build is working.
+          <h3>7. First proof — Plan Mode (inside Grok Build CLI)</h3>
+          <p>Copy the entire block and paste into Grok:</p>
+          <pre><code>Create a file called hello.txt that contains exactly this sentence:
+Grok Build is working.
+
 Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
           <ol>
-            <li>Read the plan Grok shows you.</li>
-            <li>Approve only if it makes sense.</li>
-            <li>Confirm <code>hello.txt</code> exists and contains the correct sentence.</li>
+            <li>Read the plan. Approve only if it only creates <code>hello.txt</code>.</li>
+            <li>Confirm the file: in a separate terminal run <code>cat ~/grok-practice/hello.txt</code></li>
           </ol>
         </div>
+
         <div class="section-card checklist">
           <p class="eyebrow">Success checklist (must complete)</p>
             <label class="check-row"><input type="checkbox" data-progress="setup-c1" /> grok --version works</label>
-            <label class="check-row"><input type="checkbox" data-progress="setup-c2" /> Signed in to Grok</label>
+            <label class="check-row"><input type="checkbox" data-progress="setup-c2" /> Signed in and started grok inside ~/grok-practice</label>
             <label class="check-row"><input type="checkbox" data-progress="setup-c3" /> Completed /tour</label>
             <label class="check-row"><input type="checkbox" data-progress="setup-c4" /> Created hello.txt with Plan Mode</label>
         </div>
