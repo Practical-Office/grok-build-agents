@@ -93,7 +93,7 @@
 
     sidebar.innerHTML = `
       <a class="sidebar-brand" href="${href("index.html")}">
-        <img src="${href("assets/practical-ai-mark.png")}" alt="" width="40" height="40" />
+        <img src="https://practical-office.github.io/Cursor-AI-dev/assets/practical-ai-mark.png" alt="" width="40" height="40" />
         <div class="sidebar-brand-text">
           <strong>Practical AI</strong>
           <span>Grok Build Agents</span>
