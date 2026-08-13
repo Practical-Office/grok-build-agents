@@ -27,8 +27,15 @@
         <section class="hero">
           <span class="status-chip">Module 5 of 5 · ~30 min</span>
           <h1>Trust Stages + <em>Daily Habits</em></h1>
-          <p class="hero-lede">Building the agent is the easy part. Knowing when to trust it is the hard part.</p>
+          <p class="hero-lede">Building the agent is the easy part. Knowing when to trust it is the hard part. Record the stage inside the agent folder via Grok Build CLI.</p>
         </section>
+
+        <div class="section-card">
+          <p class="eyebrow">Where you work</p>
+          <p>Open the folder for the agent you built (example):</p>
+          <pre><code>cd ~/agents/follow-up-helper
+grok</code></pre>
+        </div>
 
         <div class="section-card">
           <p class="eyebrow">Trust is earned in stages</p>
@@ -36,17 +43,28 @@
             <table>
               <thead><tr><th>Stage</th><th>Agent may</th><th>You must</th></tr></thead>
               <tbody>
-                <tr><td><strong>1</strong></td><td>Propose only</td><td>Approve every step</td></tr>
-                <tr><td><strong>2</strong></td><td>Draft / sort / label</td><td>Review outputs before use</td></tr>
-                <tr><td><strong>3</strong></td><td>Limited pre-approved actions</td><td>Spot-check regularly</td></tr>
-                <tr><td><strong>4</strong></td><td>Recurring / scheduled work</td><td>Monitor results + keep guardrails</td></tr>
+                <tr><td>1</td><td>Propose only</td><td>Approve every step</td></tr>
+                <tr><td>2</td><td>Draft / sort / label</td><td>Review outputs before use</td></tr>
+                <tr><td>3</td><td>Limited pre-approved actions</td><td>Spot-check regularly</td></tr>
+                <tr><td>4</td><td>Recurring / scheduled work</td><td>Monitor results + keep guardrails</td></tr>
               </tbody>
             </table>
           </div>
           <p>Never jump from Stage 1 to Stage 4. Most team agents stay at Stage 2 or 3 for a long time.</p>
         </div>
+
         <div class="section-card">
-          <h3>Daily habits</h3>
+          <h3>Record trust stage — paste into Grok Build CLI</h3>
+          <pre><code>Update AGENTS.md (or create it) so it clearly states:
+- Current Trust Stage: 1
+- What the agent may do at Stage 1: propose only; I approve every step
+- Stop conditions: unclear plan, requests for access I have not given, wrong or inconsistent outputs
+
+Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Daily habits</p>
           <ul>
             <li>Start every non-trivial request with Plan Mode.</li>
             <li>Keep each agent in its own folder.</li>
@@ -55,6 +73,7 @@
             <li>If results drift, tighten the playbook — do not add more power.</li>
           </ul>
         </div>
+
         <div class="hard-truth">
           <h3>Stop and escalate if</h3>
           <ul>
@@ -64,21 +83,23 @@
             <li>You cannot explain what the agent is about to do</li>
           </ul>
         </div>
+
         <div class="section-card">
-          <h3>Team handoff</h3>
-          <ol>
-            <li>Clearly named folder</li>
+          <p class="eyebrow">Team handoff checklist</p>
+          <ul>
+            <li>Clearly named folder (example: <code>~/agents/follow-up-helper</code>)</li>
             <li>Aim, Definition of Done, identity files, playbook</li>
-            <li>Current Trust Stage noted</li>
-            <li>Tell the team where it lives and what it may do</li>
-          </ol>
-          <ul class="checklist">
-            <li><label><input type="checkbox" data-progress="m5-c1" /> Trust Stage documented for one agent</label></li>
-            <li><label><input type="checkbox" data-progress="m5-c2" /> Walked a teammate through safe use</label></li>
+            <li>Current Trust Stage noted in AGENTS.md</li>
+            <li>Show a teammate where it lives and what it may do</li>
           </ul>
         </div>
 
-        <div class="page-nav no-print" id="pageNav"></div>
+        <div class="section-card checklist">
+          <p class="eyebrow">Success checklist (must complete)</p>
+            <label class="check-row"><input type="checkbox" data-progress="m5-c1" /> Trust Stage documented for one agent</label>
+            <label class="check-row"><input type="checkbox" data-progress="m5-c2" /> Walked a teammate through safe use</label>
+        </div>
+        <nav class="page-nav no-print" id="pageNav"></nav>
       </main>
     </div>
   </div>

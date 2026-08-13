@@ -21,35 +21,44 @@
         <div class="topbar-actions">
           <button type="button" class="btn btn-ghost btn-sm" id="themeToggle">Theme</button>
           <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+          <button type="button" class="btn btn-ghost btn-sm" onclick="window.print()">Print this page</button>
         </div>
       </header>
       <main class="content" id="top">
         <section class="hero">
           <span class="status-chip">Print this page</span>
           <h1>Quick <em>reference</em></h1>
-          <p class="hero-lede">Keep this open while you work.</p>
+          <p class="hero-lede">Keep this open while you work in the Grok Build CLI.</p>
         </section>
 
-        <div class="section-card">
-          <h3>Always say this</h3>
+        <div class="hard-truth">
+          <h3>Always paste this with real requests</h3>
           <pre><code>Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
         </div>
+
         <div class="section-card">
-          <h3>AGENT framework</h3>
+          <p class="eyebrow">Start a session (terminal)</p>
+          <pre><code>cd ~/agents/your-agent-name
+grok</code></pre>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">AGENT framework</p>
           <div class="table-wrap">
             <table>
               <tbody>
-                <tr><th>A</th><td>Aim — outcome + Definition of Done</td></tr>
-                <tr><th>G</th><td>Give identity — SOUL, IDENTITY, USER</td></tr>
-                <tr><th>E</th><td>Equip — context, tools, playbooks</td></tr>
-                <tr><th>N</th><td>Narrow — one agent, one lane</td></tr>
-                <tr><th>T</th><td>Trust — stages 1 → 4, never jump</td></tr>
+                <tr><td><strong>A</strong></td><td>Aim — outcome + Definition of Done</td></tr>
+                <tr><td><strong>G</strong></td><td>Give identity — SOUL, IDENTITY, USER</td></tr>
+                <tr><td><strong>E</strong></td><td>Equip — context, tools, playbooks</td></tr>
+                <tr><td><strong>N</strong></td><td>Narrow — one agent, one lane</td></tr>
+                <tr><td><strong>T</strong></td><td>Trust — stages 1 → 4, never jump</td></tr>
               </tbody>
             </table>
           </div>
         </div>
+
         <div class="section-card">
-          <h3>Six team rules</h3>
+          <p class="eyebrow">Six team rules</p>
           <ol>
             <li>Plan Mode for non-trivial work</li>
             <li>Never approve what you do not understand</li>
@@ -59,33 +68,36 @@
             <li>Save good work with <code>/skillify</code></li>
           </ol>
         </div>
+
         <div class="section-card">
-          <h3>Useful commands</h3>
+          <p class="eyebrow">Useful commands (Grok Build CLI)</p>
           <div class="table-wrap">
             <table>
               <tbody>
-                <tr><td><code>grok</code></td><td>Start a session</td></tr>
+                <tr><td><code>grok</code></td><td>Start a session (run in terminal first)</td></tr>
                 <tr><td><code>/plan</code></td><td>Force Plan Mode</td></tr>
                 <tr><td><code>/tour</code></td><td>Official short tour</td></tr>
                 <tr><td><code>/skillify</code></td><td>Save current work as a skill</td></tr>
-                <tr><td><code>grok --version</code></td><td>Check install</td></tr>
+                <tr><td><code>grok --version</code></td><td>Check install (terminal)</td></tr>
               </tbody>
             </table>
           </div>
         </div>
+
         <div class="section-card">
-          <h3>Trust stages</h3>
+          <p class="eyebrow">Trust stages</p>
           <div class="table-wrap">
             <table>
               <tbody>
-                <tr><th>1</th><td>Propose only — you approve everything</td></tr>
-                <tr><th>2</th><td>Draft / sort — you review before use</td></tr>
-                <tr><th>3</th><td>Limited actions — you spot-check</td></tr>
-                <tr><th>4</th><td>Scheduled work — you monitor</td></tr>
+                <tr><td>1</td><td>Propose only — you approve everything</td></tr>
+                <tr><td>2</td><td>Draft / sort — you review before use</td></tr>
+                <tr><td>3</td><td>Limited actions — you spot-check</td></tr>
+                <tr><td>4</td><td>Scheduled work — you monitor</td></tr>
               </tbody>
             </table>
           </div>
         </div>
+
         <div class="hard-truth">
           <h3>Stop if</h3>
           <ul>
@@ -96,7 +108,7 @@
           </ul>
         </div>
 
-        <div class="page-nav no-print" id="pageNav"></div>
+        <nav class="page-nav no-print" id="pageNav"></nav>
       </main>
     </div>
   </div>

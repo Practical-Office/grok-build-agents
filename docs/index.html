@@ -3,69 +3,74 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Grok Build Agents — Practical AI</title>
-  <meta name="description" content="Team course for building reliable AI agents with Grok Build. Plan Mode first, AGENT framework, staged trust." />
+  <title>Grok Build Agents</title>
   <link rel="icon" href="https://practical-office.github.io/Cursor-AI-dev/assets/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://practical-office.github.io/Cursor-AI-dev/css/cursor-ai-dev.css" />
 </head>
-<body data-page="hub" data-base="" data-file="index.html">
+<body data-page="index" data-base="" data-file="index.html">
   <div class="overlay" id="navOverlay" aria-hidden="true"></div>
   <div class="app">
     <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
     <div class="main">
       <header class="topbar no-print">
         <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
-        <div class="topbar-title">Course hub</div>
+        <div class="topbar-title">Grok Build Agents</div>
         <div class="topbar-actions">
           <button type="button" class="btn btn-ghost btn-sm" id="themeToggle">Theme</button>
           <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
-          <a class="btn btn-primary btn-sm" href="setup.html">Start with Setup →</a>
         </div>
       </header>
       <main class="content" id="top">
         <section class="hero">
-          <span class="status-chip">Practical AI engineering · Team course · v1</span>
+          <span class="status-chip">Team course</span>
           <h1>Grok Build <em>Agents</em></h1>
-          <p class="hero-lede">A clear, step-by-step course for building reliable AI agents with Grok Build. Written so anyone on the team can follow it — Sales, Support, Ops, or Engineering.</p>
+          <p class="hero-lede">Team course for building reliable AI agents with Grok Build. Written so people with little technical background can follow it. All agent work runs in the Grok Build CLI on your computer.</p>
         </section>
+
         <div class="section-card">
-          <p class="eyebrow">Why</p>
-          <h3>Why a shared agent process matters</h3>
-          <p>Most people either under-use agents or let them run without control. Without a common path, the team invents habits and ships uncontrolled work. This course installs one safe path: Plan Mode first, narrow scope, human approval, and reusable Skills.</p>
-          <p><strong>Principles:</strong> Plan Mode non-negotiable · One agent, one lane · Trust in stages · Capture what works · Stop when unsure.</p>
+          <p class="eyebrow">Who this is for</p>
+          <p>Anyone on the team who needs to build or run basic agents — Sales, Support, Ops, or Engineering. You do not need to know how to code.</p>
         </div>
-        <div class="card-grid">
-          <div class="stat-card"><strong>5 modules</strong><span>Setup hard gate + structured path</span></div>
-          <div class="stat-card"><strong>Setup first</strong><span>Hard gate before Module 1</span></div>
-          <div class="stat-card"><strong>Living process</strong><span>Process source of truth</span></div>
-          <div class="stat-card"><strong>AGENT framework</strong><span>Aim · Identity · Equip · Narrow · Trust</span></div>
-        </div>
+
         <div class="section-card">
-          <p class="eyebrow">Source of truth</p>
-          <p>Living process: <a href="https://github.com/Practical-Office/grok-build-agents/blob/main/docs/reference/GROK-BUILD-AGENTS-PROCESS.md" target="_blank" rel="noopener noreferrer">GROK-BUILD-AGENTS-PROCESS.md</a>. Course modules lag the process doc — never lead it.</p>
-          <p style="margin-top:0.75rem"><a href="https://practical-office.github.io/dev-sops/">← Back to hub</a> · Intake: <a href="https://github.com/orgs/Practical-Office/projects/2" target="_blank" rel="noopener noreferrer">Team Work</a></p>
+          <p class="eyebrow">What you will be able to do</p>
+          <ul>
+            <li>Install Grok Build locally and use Plan Mode every time</li>
+            <li>Use the AGENT framework (Aim → Give identity → Equip → Narrow → Trust)</li>
+            <li>Build simple, useful agents in their own folders without creating mess</li>
+            <li>Turn good work into reusable Skills with <code>/skillify</code></li>
+            <li>Follow team safety rules so agents stay under control</li>
+          </ul>
         </div>
+
         <div class="section-card">
-          <p class="eyebrow">Table of contents</p>
+          <p class="eyebrow">Course structure</p>
           <div class="table-wrap">
             <table>
-              <thead><tr><th>#</th><th>Page</th><th>Time</th></tr></thead>
+              <thead><tr><th>Page</th><th>Purpose</th></tr></thead>
               <tbody>
-                <tr><td>—</td><td><a href="setup.html">Setup — install + first success (hard gate)</a></td><td>25–35 min</td></tr>
-                <tr><td>1</td><td><a href="module-1.html">Safety Rules + Plan Mode</a></td><td>30 min</td></tr>
-                <tr><td>2</td><td><a href="module-2.html">Aim + Identity</a></td><td>35 min</td></tr>
-                <tr><td>3</td><td><a href="module-3.html">Equip + Narrow Scope</a></td><td>30 min</td></tr>
-                <tr><td>4</td><td><a href="module-4.html">First Real Agents (Labs)</a></td><td>60–90 min</td></tr>
-                <tr><td>5</td><td><a href="module-5.html">Trust Stages + Daily Habits</a></td><td>30 min</td></tr>
-                <tr><td>—</td><td><a href="quick-reference.html">Quick reference</a></td><td>print</td></tr>
+                <tr><td><a href="setup.html">Setup</a></td><td>Hard gate — install + first success in Grok Build CLI</td></tr>
+                <tr><td>Module 1</td><td>Safety rules + Plan Mode</td></tr>
+                <tr><td>Module 2</td><td>Aim + Identity</td></tr>
+                <tr><td>Module 3</td><td>Equip + Narrow scope</td></tr>
+                <tr><td>Module 4</td><td>First real agents (labs)</td></tr>
+                <tr><td>Module 5</td><td>Trust stages + daily habits</td></tr>
+                <tr><td><a href="quick-reference.html">Quick Reference</a></td><td>One-page lookup with paste commands</td></tr>
+                <tr><td><a href="https://github.com/Practical-Office/grok-build-agents/blob/main/docs/reference/GROK-BUILD-AGENTS-PROCESS.md">Process doc</a></td><td>Living source of truth</td></tr>
               </tbody>
             </table>
           </div>
         </div>
-        <div class="page-nav no-print" id="pageNav"></div>
+
+        <div class="hard-truth">
+          <h3>Start here</h3>
+          <p>Complete <a href="setup.html">Setup</a> first. It is a hard gate. Every later lesson assumes you can open a terminal, start <code>grok</code>, and paste Plan Mode prompts into the Grok Build CLI.</p>
+        </div>
+
+        <nav class="page-nav no-print" id="pageNav"></nav>
       </main>
     </div>
   </div>
