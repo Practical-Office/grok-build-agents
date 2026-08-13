@@ -1,85 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Quick Reference — Grok Build Agents</title>
-  <style>
-    :root {
-      --bg: #0b0f19; --card: #121826; --text: #e8eef7; --muted: #9aabbf;
-      --accent: #38dff5; --border: rgba(160, 176, 200, 0.16);
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55; }
-    a { color: var(--accent); }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
-    h1 { font-size: 1.6rem; margin: 0 0 1rem; }
-    h2 { font-size: 1.1rem; margin-top: 1.6rem; margin-bottom: 0.5rem; }
-    pre, code { font-family: ui-monospace, Menlo, monospace; font-size: 0.85rem; }
-    pre { background: #080c14; border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 0.9rem; overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; margin: 0.6rem 0 1rem; }
-    th, td { text-align: left; padding: 0.45rem 0.35rem; border-bottom: 1px solid var(--border); vertical-align: top; }
-    th { color: var(--muted); font-size: 0.8rem; }
-    ul { margin: 0.4rem 0; padding-left: 1.2rem; }
-    .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
-  </style>
+  <link rel="icon" href="https://practical-office.github.io/Cursor-AI-dev/assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://practical-office.github.io/Cursor-AI-dev/css/cursor-ai-dev.css" />
 </head>
-<body>
-  <div class="wrap">
-    <p><a href="index.html">← Course home</a></p>
-    <h1>Quick Reference</h1>
-    <p>Print this page or keep it open while you work.</p>
+<body data-page="quick-reference" data-base="" data-file="quick-reference.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Quick reference</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="themeToggle">Theme</button>
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+        <section class="hero">
+          <span class="status-chip">Print this page</span>
+          <h1>Quick <em>reference</em></h1>
+          <p class="hero-lede">Keep this open while you work.</p>
+        </section>
 
-    <h2>Always say this</h2>
-    <pre><code>Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
+        <div class="section-card">
+          <h3>Always say this</h3>
+          <pre><code>Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
+        </div>
+        <div class="section-card">
+          <h3>AGENT framework</h3>
+          <div class="table-wrap">
+            <table>
+              <tbody>
+                <tr><th>A</th><td>Aim — outcome + Definition of Done</td></tr>
+                <tr><th>G</th><td>Give identity — SOUL, IDENTITY, USER</td></tr>
+                <tr><th>E</th><td>Equip — context, tools, playbooks</td></tr>
+                <tr><th>N</th><td>Narrow — one agent, one lane</td></tr>
+                <tr><th>T</th><td>Trust — stages 1 → 4, never jump</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="section-card">
+          <h3>Six team rules</h3>
+          <ol>
+            <li>Plan Mode for non-trivial work</li>
+            <li>Never approve what you do not understand</li>
+            <li>One agent = one job</li>
+            <li>No money / client data / external systems until proven</li>
+            <li>If unsure → stop and ask</li>
+            <li>Save good work with <code>/skillify</code></li>
+          </ol>
+        </div>
+        <div class="section-card">
+          <h3>Useful commands</h3>
+          <div class="table-wrap">
+            <table>
+              <tbody>
+                <tr><td><code>grok</code></td><td>Start a session</td></tr>
+                <tr><td><code>/plan</code></td><td>Force Plan Mode</td></tr>
+                <tr><td><code>/tour</code></td><td>Official short tour</td></tr>
+                <tr><td><code>/skillify</code></td><td>Save current work as a skill</td></tr>
+                <tr><td><code>grok --version</code></td><td>Check install</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="section-card">
+          <h3>Trust stages</h3>
+          <div class="table-wrap">
+            <table>
+              <tbody>
+                <tr><th>1</th><td>Propose only — you approve everything</td></tr>
+                <tr><th>2</th><td>Draft / sort — you review before use</td></tr>
+                <tr><th>3</th><td>Limited actions — you spot-check</td></tr>
+                <tr><th>4</th><td>Scheduled work — you monitor</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="hard-truth">
+          <h3>Stop if</h3>
+          <ul>
+            <li>Plan is unclear or too broad</li>
+            <li>Agent wants access you are not comfortable giving</li>
+            <li>Results look wrong</li>
+            <li>You cannot explain what it is about to do</li>
+          </ul>
+        </div>
 
-    <h2>AGENT framework</h2>
-    <table>
-      <tr><th>A</th><td>Aim — outcome + Definition of Done</td></tr>
-      <tr><th>G</th><td>Give identity — SOUL, IDENTITY, USER</td></tr>
-      <tr><th>E</th><td>Equip — context, tools, playbooks</td></tr>
-      <tr><th>N</th><td>Narrow — one agent, one lane</td></tr>
-      <tr><th>T</th><td>Trust — stages 1 → 4, never jump</td></tr>
-    </table>
-
-    <h2>Six team rules</h2>
-    <ol>
-      <li>Plan Mode for non-trivial work</li>
-      <li>Never approve what you do not understand</li>
-      <li>One agent = one job</li>
-      <li>No money / client data / external systems until proven</li>
-      <li>If unsure → stop and ask</li>
-      <li>Save good work with <code>/skillify</code></li>
-    </ol>
-
-    <h2>Useful commands</h2>
-    <table>
-      <tr><td><code>grok</code></td><td>Start a session</td></tr>
-      <tr><td><code>/plan</code></td><td>Force Plan Mode</td></tr>
-      <tr><td><code>/tour</code></td><td>Official short tour</td></tr>
-      <tr><td><code>/skillify</code></td><td>Save current work as a skill</td></tr>
-      <tr><td><code>grok --version</code></td><td>Check install</td></tr>
-    </table>
-
-    <h2>Trust stages</h2>
-    <table>
-      <tr><th>1</th><td>Propose only — you approve everything</td></tr>
-      <tr><th>2</th><td>Draft / sort — you review before use</td></tr>
-      <tr><th>3</th><td>Limited actions — you spot-check</td></tr>
-      <tr><th>4</th><td>Scheduled work — you monitor</td></tr>
-    </table>
-
-    <h2>Stop if</h2>
-    <ul>
-      <li>Plan is unclear or too broad</li>
-      <li>Agent wants access you are not comfortable giving</li>
-      <li>Results look wrong</li>
-      <li>You cannot explain what it is about to do</li>
-    </ul>
-
-    <div class="footer">
-      <p>Living process: <a href="reference/GROK-BUILD-AGENTS-PROCESS.md">GROK-BUILD-AGENTS-PROCESS.md</a></p>
+        <div class="page-nav no-print" id="pageNav"></div>
+      </main>
     </div>
   </div>
+  <script src="js/grok-build-agents.js"></script>
 </body>
 </html>

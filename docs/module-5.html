@@ -1,97 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Module 5 — Trust Stages + Daily Habits | Grok Build Agents</title>
-  <style>
-    :root {
-      --bg: #0b0f19; --card: #121826; --text: #e8eef7; --muted: #9aabbf;
-      --accent: #38dff5; --border: rgba(160, 176, 200, 0.16); --warn: #fbbf24;
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 17px; line-height: 1.65; }
-    a { color: var(--accent); }
-    .wrap { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
-    .nav { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
-    h1 { font-size: 1.9rem; margin: 0.3rem 0 0.6rem; }
-    .lead { color: var(--muted); margin-bottom: 1.5rem; }
-    h2 { margin-top: 2.2rem; font-size: 1.25rem; }
-    .callout { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; margin: 1.2rem 0; }
-    .callout.warn { border-color: rgba(251, 191, 36, 0.35); }
-    .mark { font-weight: 600; margin-bottom: 0.35rem; }
-    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-    th, td { text-align: left; padding: 0.6rem 0.4rem; border-bottom: 1px solid var(--border); vertical-align: top; }
-    th { color: var(--muted); font-size: 0.85rem; }
-    .footer { margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
-  </style>
+  <link rel="icon" href="https://practical-office.github.io/Cursor-AI-dev/assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://practical-office.github.io/Cursor-AI-dev/css/cursor-ai-dev.css" />
 </head>
-<body>
-  <div class="wrap">
-    <div class="nav"><a href="index.html">← Course home</a> · Module 5 of 5</div>
+<body data-page="module-5" data-base="" data-file="module-5.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Module 5</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="themeToggle">Theme</button>
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+        <section class="hero">
+          <span class="status-chip">Module 5 of 5 · ~30 min</span>
+          <h1>Trust Stages + <em>Daily Habits</em></h1>
+          <p class="hero-lede">Building the agent is the easy part. Knowing when to trust it is the hard part.</p>
+        </section>
 
-    <h1>Module 5 — Trust Stages + Daily Habits</h1>
-    <p class="lead">Building the agent is the easy part. Knowing when to trust it is the hard part.</p>
+        <div class="section-card">
+          <p class="eyebrow">Trust is earned in stages</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Stage</th><th>Agent may</th><th>You must</th></tr></thead>
+              <tbody>
+                <tr><td><strong>1</strong></td><td>Propose only</td><td>Approve every step</td></tr>
+                <tr><td><strong>2</strong></td><td>Draft / sort / label</td><td>Review outputs before use</td></tr>
+                <tr><td><strong>3</strong></td><td>Limited pre-approved actions</td><td>Spot-check regularly</td></tr>
+                <tr><td><strong>4</strong></td><td>Recurring / scheduled work</td><td>Monitor results + keep guardrails</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Never jump from Stage 1 to Stage 4. Most team agents stay at Stage 2 or 3 for a long time.</p>
+        </div>
+        <div class="section-card">
+          <h3>Daily habits</h3>
+          <ul>
+            <li>Start every non-trivial request with Plan Mode.</li>
+            <li>Keep each agent in its own folder.</li>
+            <li>After something works, run <code>/skillify</code>.</li>
+            <li>Re-read IDENTITY boundaries before expanding power.</li>
+            <li>If results drift, tighten the playbook — do not add more power.</li>
+          </ul>
+        </div>
+        <div class="hard-truth">
+          <h3>Stop and escalate if</h3>
+          <ul>
+            <li>The plan is unclear or too broad</li>
+            <li>The agent asks for access you are not comfortable giving</li>
+            <li>Outputs look wrong or inconsistent</li>
+            <li>You cannot explain what the agent is about to do</li>
+          </ul>
+        </div>
+        <div class="section-card">
+          <h3>Team handoff</h3>
+          <ol>
+            <li>Clearly named folder</li>
+            <li>Aim, Definition of Done, identity files, playbook</li>
+            <li>Current Trust Stage noted</li>
+            <li>Tell the team where it lives and what it may do</li>
+          </ol>
+          <ul class="checklist">
+            <li><label><input type="checkbox" data-progress="m5-c1" /> Trust Stage documented for one agent</label></li>
+            <li><label><input type="checkbox" data-progress="m5-c2" /> Walked a teammate through safe use</label></li>
+          </ul>
+        </div>
 
-    <h2>1. Trust is earned in stages</h2>
-    <table>
-      <thead>
-        <tr><th>Stage</th><th>Agent may</th><th>You must</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>1</strong></td><td>Propose only</td><td>Approve every step</td></tr>
-        <tr><td><strong>2</strong></td><td>Draft / sort / label</td><td>Review outputs before use</td></tr>
-        <tr><td><strong>3</strong></td><td>Limited pre-approved actions</td><td>Spot-check regularly</td></tr>
-        <tr><td><strong>4</strong></td><td>Recurring / scheduled work</td><td>Monitor results + keep guardrails</td></tr>
-      </tbody>
-    </table>
-    <p>Never jump from Stage 1 to Stage 4. Most team agents should stay at Stage 2 or 3 for a long time.</p>
-
-    <h2>2. Daily habits</h2>
-    <ul>
-      <li>Start every non-trivial request with Plan Mode.</li>
-      <li>Keep each agent in its own folder.</li>
-      <li>After something works, run <code>/skillify</code>.</li>
-      <li>Re-read the IDENTITY boundaries before expanding what an agent can do.</li>
-      <li>If results drift, tighten the playbook or identity files instead of adding more power.</li>
-    </ul>
-
-    <h2>3. When to stop</h2>
-    <div class="callout warn">
-      <div class="mark">Stop and escalate if</div>
-      <ul>
-        <li>The plan is unclear or too broad</li>
-        <li>The agent asks for access you are not comfortable giving</li>
-        <li>Outputs look wrong or inconsistent</li>
-        <li>You cannot explain what the agent is about to do</li>
-      </ul>
-    </div>
-
-    <h2>4. Team handoff</h2>
-    <p>When you create a useful agent or skill:</p>
-    <ol>
-      <li>Put it in a clearly named folder.</li>
-      <li>Include the Aim, Definition of Done, identity files, and playbook.</li>
-      <li>Note the current Trust Stage.</li>
-      <li>Tell the team where it lives and what it is allowed to do.</li>
-    </ol>
-
-    <h2>5. Final practice</h2>
-    <p>Take one of the agents from Module 4 and:</p>
-    <ol>
-      <li>Write its current Trust Stage in a short README inside the folder.</li>
-      <li>List two things it is allowed to do and two things it must never do.</li>
-      <li>Share the folder location with one teammate and walk them through how to use it safely.</li>
-    </ol>
-
-    <div class="callout">
-      <div class="mark">Course complete when</div>
-      <p>You have finished Setup + Modules 1–5, built at least two narrow agents, saved at least one skill, and can explain the Trust Stages and the six team rules without looking them up.</p>
-    </div>
-
-    <div class="footer">
-      <p><a href="module-4.html">← Module 4</a> · <a href="quick-reference.html">Quick Reference →</a></p>
+        <div class="page-nav no-print" id="pageNav"></div>
+      </main>
     </div>
   </div>
+  <script src="js/grok-build-agents.js"></script>
 </body>
 </html>
