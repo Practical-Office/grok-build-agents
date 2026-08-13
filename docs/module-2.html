@@ -1,98 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Module 2 — Aim + Identity | Grok Build Agents</title>
-  <style>
-    :root {
-      --bg: #0b0f19; --card: #121826; --text: #e8eef7; --muted: #9aabbf;
-      --accent: #38dff5; --border: rgba(160, 176, 200, 0.16);
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 17px; line-height: 1.65; }
-    a { color: var(--accent); }
-    .wrap { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
-    .nav { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
-    h1 { font-size: 1.9rem; margin: 0.3rem 0 0.6rem; }
-    .lead { color: var(--muted); margin-bottom: 1.5rem; }
-    h2 { margin-top: 2.2rem; font-size: 1.25rem; }
-    .callout { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; margin: 1.2rem 0; }
-    .mark { font-weight: 600; margin-bottom: 0.35rem; }
-    pre, code { font-family: ui-monospace, Menlo, monospace; font-size: 0.9rem; }
-    pre { background: #080c14; border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1rem; overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-    th, td { text-align: left; padding: 0.6rem 0.4rem; border-bottom: 1px solid var(--border); vertical-align: top; }
-    th { color: var(--muted); font-size: 0.85rem; }
-    .footer { margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
-  </style>
+  <link rel="icon" href="https://practical-office.github.io/Cursor-AI-dev/assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://practical-office.github.io/Cursor-AI-dev/css/cursor-ai-dev.css" />
 </head>
-<body>
-  <div class="wrap">
-    <div class="nav"><a href="index.html">← Course home</a> · Module 2 of 5</div>
+<body data-page="module-2" data-base="" data-file="module-2.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Module 2</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="themeToggle">Theme</button>
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+        <section class="hero">
+          <span class="status-chip">Module 2 of 5 · ~35 min</span>
+          <h1>Aim + <em>Identity</em></h1>
+          <p class="hero-lede">Before an agent can work well, it needs a clear outcome and a clear identity.</p>
+        </section>
 
-    <h1>Module 2 — Aim + Identity</h1>
-    <p class="lead">Before an agent can work well, it needs a clear outcome and a clear identity.</p>
-
-    <h2>1. Aim for a specific outcome</h2>
-    <p>Do not start by listing steps. Start by stating the result you want.</p>
-    <p><strong>Weak:</strong> “Help with my emails.”</p>
-    <p><strong>Strong:</strong> “Every morning the inbox has drafts ready in my voice, important items are flagged, and nothing important is missed.”</p>
-
-    <p>Also write a <strong>Definition of Done</strong> — one sentence that tells the agent when the job is finished.</p>
-
-    <div class="callout">
-      <div class="mark">Template you can copy</div>
-      <pre><code>I need to [outcome].
+        <div class="section-card">
+          <p class="eyebrow">Aim for a specific outcome</p>
+          <p>Do not start by listing steps. Start by stating the result you want.</p>
+          <p><strong>Weak:</strong> “Help with my emails.”</p>
+          <p><strong>Strong:</strong> “Every morning the inbox has drafts ready in my voice, important items are flagged, and nothing important is missed.”</p>
+          <p>Also write a <strong>Definition of Done</strong> — one sentence that tells the agent when the job is finished.</p>
+          <pre><code>I need to [outcome].
 Why this matters: [short reason].
 Definition of Done: [one clear, measurable sentence].
 Use Plan Mode. Ask me any clarifying questions first.</code></pre>
-    </div>
-
-    <h2>2. Give the agent an identity</h2>
-    <p>Out of the box, an AI knows a little about everything and nothing deeply. Identity focuses it.</p>
-    <p>Create three plain-English files (let Grok write them for you):</p>
-    <table>
-      <thead>
-        <tr><th>File</th><th>What it is</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>SOUL</strong></td><td>Personality, tone, values, and how it behaves</td></tr>
-        <tr><td><strong>IDENTITY</strong></td><td>Name, role, job description, and hard boundaries (what it must never touch)</td></tr>
-        <tr><td><strong>USER</strong></td><td>Who it works for — your role, priorities, and preferences</td></tr>
-      </tbody>
-    </table>
-
-    <p>Prompt to generate all three:</p>
-    <pre><code>I want to build an AI agent that [paste your Aim / outcome].
+        </div>
+        <div class="section-card">
+          <p class="eyebrow">Give the agent an identity</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>File</th><th>What it is</th></tr></thead>
+              <tbody>
+                <tr><td><strong>SOUL</strong></td><td>Personality, tone, values, behavior</td></tr>
+                <tr><td><strong>IDENTITY</strong></td><td>Name, role, job description, hard boundaries</td></tr>
+                <tr><td><strong>USER</strong></td><td>Who it works for — your role, priorities, preferences</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <pre><code>I want to build an AI agent that [paste your Aim / outcome].
 Create its three identity files: a SOUL file, an IDENTITY file, and a USER file (about me).
 Ask me any questions you need, then write all three.
 Use Plan Mode.</code></pre>
+        </div>
+        <div class="section-card">
+          <h3>Best practices</h3>
+          <ul>
+            <li>Make boundaries explicit in IDENTITY (“Inbox only. Never touch calendar or payments.”).</li>
+            <li>Keep the outcome in one sentence.</li>
+            <li>Let Grok interview you — reverse prompting produces better identity files.</li>
+          </ul>
+        </div>
+        <div class="section-card">
+          <p class="eyebrow">Practice lab</p>
+          <ol>
+            <li>Write the Aim + Definition of Done.</li>
+            <li>Run the identity-files prompt with Plan Mode.</li>
+            <li>Answer Grok’s questions and save the three files.</li>
+          </ol>
+          <ul class="checklist">
+            <li><label><input type="checkbox" data-progress="m2-c1" /> Aim + Definition of Done written</label></li>
+            <li><label><input type="checkbox" data-progress="m2-c2" /> Three identity files reviewed and accepted</label></li>
+          </ul>
+        </div>
 
-    <h2>3. Best practices</h2>
-    <ul>
-      <li>Make boundaries explicit in the IDENTITY file (“Inbox only. Never touch calendar or payments.”).</li>
-      <li>Keep the outcome in one sentence. If you cannot state it clearly, you are not ready to build.</li>
-      <li>Let Grok interview you. Reverse prompting (ask it to ask you questions) produces better identity files.</li>
-    </ul>
-
-    <h2>4. Practice lab (required)</h2>
-    <p>Choose a simple real need from your work (example: daily activity summary, follow-up reminder list, or support reply helper).</p>
-    <ol>
-      <li>Write the Aim + Definition of Done.</li>
-      <li>Run the identity-files prompt above with Plan Mode.</li>
-      <li>Answer Grok’s questions.</li>
-      <li>Save the three files in a dedicated folder for that agent.</li>
-    </ol>
-
-    <div class="callout">
-      <div class="mark">Done when</div>
-      <p>You have one Aim sentence, one Definition of Done, and three identity files you reviewed and accepted.</p>
-    </div>
-
-    <div class="footer">
-      <p><a href="module-1.html">← Module 1</a> · <a href="module-3.html">Next: Module 3 →</a></p>
+        <div class="page-nav no-print" id="pageNav"></div>
+      </main>
     </div>
   </div>
+  <script src="js/grok-build-agents.js"></script>
 </body>
 </html>

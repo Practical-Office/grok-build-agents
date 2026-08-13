@@ -1,89 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Module 3 — Equip + Narrow Scope | Grok Build Agents</title>
-  <style>
-    :root {
-      --bg: #0b0f19; --card: #121826; --text: #e8eef7; --muted: #9aabbf;
-      --accent: #38dff5; --border: rgba(160, 176, 200, 0.16);
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 17px; line-height: 1.65; }
-    a { color: var(--accent); }
-    .wrap { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
-    .nav { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
-    h1 { font-size: 1.9rem; margin: 0.3rem 0 0.6rem; }
-    .lead { color: var(--muted); margin-bottom: 1.5rem; }
-    h2 { margin-top: 2.2rem; font-size: 1.25rem; }
-    .callout { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; margin: 1.2rem 0; }
-    .mark { font-weight: 600; margin-bottom: 0.35rem; }
-    pre, code { font-family: ui-monospace, Menlo, monospace; font-size: 0.9rem; }
-    pre { background: #080c14; border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1rem; overflow-x: auto; }
-    .footer { margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
-  </style>
+  <link rel="icon" href="https://practical-office.github.io/Cursor-AI-dev/assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://practical-office.github.io/Cursor-AI-dev/css/cursor-ai-dev.css" />
 </head>
-<body>
-  <div class="wrap">
-    <div class="nav"><a href="index.html">← Course home</a> · Module 3 of 5</div>
+<body data-page="module-3" data-base="" data-file="module-3.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Module 3</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="themeToggle">Theme</button>
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+        <section class="hero">
+          <span class="status-chip">Module 3 of 5 · ~30 min</span>
+          <h1>Equip + <em>Narrow Scope</em></h1>
+          <p class="hero-lede">An agent with a clear goal still needs the right context and a tight boundary.</p>
+        </section>
 
-    <h1>Module 3 — Equip + Narrow Scope</h1>
-    <p class="lead">An agent with a clear goal still needs the right context and a tight boundary.</p>
-
-    <h2>1. Equip the agent</h2>
-    <p>Give it only what it needs to do the job well:</p>
-    <ul>
-      <li><strong>Context</strong> — past examples, style guides, process notes</li>
-      <li><strong>Tools</strong> — only the connections it actually requires</li>
-      <li><strong>Playbooks</strong> — short step-by-step instructions for each sub-task</li>
-    </ul>
-
-    <p>Best practice: when possible, let Grok learn from real past work instead of writing long manuals yourself.</p>
-    <pre><code>Study these examples of how I usually do this work.
+        <div class="section-card">
+          <p class="eyebrow">Equip the agent</p>
+          <ul>
+            <li><strong>Context</strong> — past examples, style guides, process notes</li>
+            <li><strong>Tools</strong> — only the connections it actually requires</li>
+            <li><strong>Playbooks</strong> — short step-by-step instructions for each sub-task</li>
+          </ul>
+          <pre><code>Study these examples of how I usually do this work.
 Write a short playbook that captures the pattern.
 Use Plan Mode.</code></pre>
-
-    <h2>2. Narrow the scope (critical)</h2>
-    <p>One agent should have one job. Broad agents get confused and make mistakes.</p>
-    <p><strong>Bad:</strong> “Handle my inbox, calendar, and client follow-ups.”</p>
-    <p><strong>Good:</strong> “Inbox only — sort, draft replies, and flag items that need me.”</p>
-
-    <p>If a job touches multiple areas, split it into separate specialist agents and (only if needed) add a Manager agent whose only job is coordination.</p>
-
-    <div class="callout">
-      <div class="mark">Manager agent prompt (use only when you have multiple specialists)</div>
-      <pre><code>You are my Manager agent. You never do any task yourself.
+        </div>
+        <div class="section-card">
+          <p class="eyebrow">Narrow the scope (critical)</p>
+          <p>One agent should have one job. Broad agents get confused and make mistakes.</p>
+          <p><strong>Bad:</strong> “Handle my inbox, calendar, and client follow-ups.”</p>
+          <p><strong>Good:</strong> “Inbox only — sort, draft replies, and flag items that need me.”</p>
+          <p>If a job touches multiple areas, split it into specialist agents. Add a Manager agent only if needed for coordination.</p>
+          <pre><code>You are my Manager agent. You never do any task yourself.
 When a job comes in, spin up or assign a dedicated sub-agent for that one job.
 One agent, one lane. Coordinate and report back to me.
 Use Plan Mode.</code></pre>
-    </div>
+        </div>
+        <div class="section-card">
+          <h3>Best practices for Grok Build</h3>
+          <ul>
+            <li>Keep each agent in its own folder when practical.</li>
+            <li>Put lasting rules in an <code>AGENTS.md</code> file in that folder.</li>
+            <li>Prefer small, testable steps over one giant request.</li>
+            <li>After something works well, run <code>/skillify</code>.</li>
+          </ul>
+        </div>
+        <div class="section-card">
+          <p class="eyebrow">Practice lab</p>
+          <ol>
+            <li>Write or generate one short playbook.</li>
+            <li>Add a clear boundary to the IDENTITY file.</li>
+            <li>Create <code>AGENTS.md</code> with the six team rules + one-lane rule.</li>
+          </ol>
+          <ul class="checklist">
+            <li><label><input type="checkbox" data-progress="m3-c1" /> Playbook + boundary written</label></li>
+            <li><label><input type="checkbox" data-progress="m3-c2" /> AGENTS.md created</label></li>
+          </ul>
+        </div>
 
-    <h2>3. Best practices for Grok Build</h2>
-    <ul>
-      <li>Keep each agent in its own folder when practical.</li>
-      <li>Put lasting rules in an <code>AGENTS.md</code> file in that folder so Grok always sees them.</li>
-      <li>Prefer small, testable steps over one giant request.</li>
-      <li>After something works well, run <code>/skillify</code> to turn it into a reusable skill.</li>
-    </ul>
-
-    <h2>4. Practice lab (required)</h2>
-    <p>Take the agent you started in Module 2 and:</p>
-    <ol>
-      <li>Write or generate one short playbook for its main sub-task.</li>
-      <li>Add a clear boundary sentence to the IDENTITY file (“This agent only does X. It never does Y.”).</li>
-      <li>Create a simple <code>AGENTS.md</code> in the folder with the six team safety rules plus the agent’s one-lane rule.</li>
-      <li>Do all of the above with Plan Mode.</li>
-    </ol>
-
-    <div class="callout">
-      <div class="mark">Done when</div>
-      <p>Your agent has a written playbook, an explicit boundary, and an <code>AGENTS.md</code> file.</p>
-    </div>
-
-    <div class="footer">
-      <p><a href="module-2.html">← Module 2</a> · <a href="module-4.html">Next: Module 4 →</a></p>
+        <div class="page-nav no-print" id="pageNav"></div>
+      </main>
     </div>
   </div>
+  <script src="js/grok-build-agents.js"></script>
 </body>
 </html>
