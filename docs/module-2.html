@@ -27,8 +27,16 @@
         <section class="hero">
           <span class="status-chip">Module 2 of 5 · ~35 min</span>
           <h1>Aim + <em>Identity</em></h1>
-          <p class="hero-lede">Before an agent can work well, it needs a clear outcome and a clear identity.</p>
+          <p class="hero-lede">Before an agent can work well, it needs a clear outcome and a clear identity. All prompts go into the Grok Build CLI.</p>
         </section>
+
+        <div class="section-card">
+          <p class="eyebrow">Where you work</p>
+          <p>In the terminal:</p>
+          <pre><code>cd ~/grok-practice
+grok</code></pre>
+          <p>Paste every prompt below into the <strong>Grok Build CLI</strong>.</p>
+        </div>
 
         <div class="section-card">
           <p class="eyebrow">Aim for a specific outcome</p>
@@ -36,50 +44,63 @@
           <p><strong>Weak:</strong> “Help with my emails.”</p>
           <p><strong>Strong:</strong> “Every morning the inbox has drafts ready in my voice, important items are flagged, and nothing important is missed.”</p>
           <p>Also write a <strong>Definition of Done</strong> — one sentence that tells the agent when the job is finished.</p>
-          <pre><code>I need to [outcome].
-Why this matters: [short reason].
-Definition of Done: [one clear, measurable sentence].
-Use Plan Mode. Ask me any clarifying questions first.</code></pre>
         </div>
+
+        <div class="section-card">
+          <h3>Example Aim — paste into Grok to practice</h3>
+          <pre><code>I need an inbox triage helper.
+Why this matters: I waste time sorting email every morning.
+Definition of Done: Given a list of email subjects, the helper labels each one as Reply now, Reply later, or Archive, and writes a one-line reason.
+Use Plan Mode. Ask me any clarifying questions first. Do not make any changes until I approve the plan.</code></pre>
+          <p>Answer Grok’s questions. Do not approve until the outcome is clear and narrow.</p>
+        </div>
+
         <div class="section-card">
           <p class="eyebrow">Give the agent an identity</p>
           <div class="table-wrap">
             <table>
               <thead><tr><th>File</th><th>What it is</th></tr></thead>
               <tbody>
-                <tr><td><strong>SOUL</strong></td><td>Personality, tone, values, behavior</td></tr>
-                <tr><td><strong>IDENTITY</strong></td><td>Name, role, job description, hard boundaries</td></tr>
-                <tr><td><strong>USER</strong></td><td>Who it works for — your role, priorities, preferences</td></tr>
+                <tr><td>SOUL</td><td>Personality, tone, values, behavior</td></tr>
+                <tr><td>IDENTITY</td><td>Name, role, job description, hard boundaries</td></tr>
+                <tr><td>USER</td><td>Who it works for — your role, priorities, preferences</td></tr>
               </tbody>
             </table>
           </div>
-          <pre><code>I want to build an AI agent that [paste your Aim / outcome].
-Create its three identity files: a SOUL file, an IDENTITY file, and a USER file (about me).
-Ask me any questions you need, then write all three.
-Use Plan Mode.</code></pre>
         </div>
+
         <div class="section-card">
-          <h3>Best practices</h3>
+          <h3>Identity prompt — paste into Grok Build CLI</h3>
+          <pre><code>I want to build an AI agent that helps with inbox triage only.
+Create three identity files in this folder:
+1. SOUL.md — personality, tone, values
+2. IDENTITY.md — name, role, job description, hard boundaries (inbox only; never touch calendar, payments, or client systems)
+3. USER.md — about me: my role, priorities, and preferences
+
+Ask me any questions you need first, then write all three files.
+Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
+          <ol>
+            <li>Answer Grok’s questions honestly.</li>
+            <li>Read the plan. Confirm it only creates those three files.</li>
+            <li>Approve, then open each file and check the boundaries are explicit.</li>
+          </ol>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Best practices</p>
           <ul>
             <li>Make boundaries explicit in IDENTITY (“Inbox only. Never touch calendar or payments.”).</li>
             <li>Keep the outcome in one sentence.</li>
-            <li>Let Grok interview you — reverse prompting produces better identity files.</li>
-          </ul>
-        </div>
-        <div class="section-card">
-          <p class="eyebrow">Practice lab</p>
-          <ol>
-            <li>Write the Aim + Definition of Done.</li>
-            <li>Run the identity-files prompt with Plan Mode.</li>
-            <li>Answer Grok’s questions and save the three files.</li>
-          </ol>
-          <ul class="checklist">
-            <li><label><input type="checkbox" data-progress="m2-c1" /> Aim + Definition of Done written</label></li>
-            <li><label><input type="checkbox" data-progress="m2-c2" /> Three identity files reviewed and accepted</label></li>
+            <li>Let Grok interview you — answering its questions produces better identity files.</li>
           </ul>
         </div>
 
-        <div class="page-nav no-print" id="pageNav"></div>
+        <div class="section-card checklist">
+          <p class="eyebrow">Success checklist (must complete)</p>
+            <label class="check-row"><input type="checkbox" data-progress="m2-c1" /> Aim + Definition of Done written</label>
+            <label class="check-row"><input type="checkbox" data-progress="m2-c2" /> Three identity files reviewed and accepted</label>
+        </div>
+        <nav class="page-nav no-print" id="pageNav"></nav>
       </main>
     </div>
   </div>
