@@ -2,11 +2,11 @@
 
 Team course for building reliable AI agents with **Grok Build**.
 
-**Live site (after deploy):** https://practical-office.github.io/grok-build-agents/
+**Live site:** https://practical-office.github.io/grok-build-agents/
 
 ## Who this is for
 
-Anyone on the team who needs to build or run basic agents — Sales, Support, Ops, or Engineering. Written so people with little technical background can follow it.
+Anyone on the team who needs to build or run basic agents — Sales, Support, Ops, or Engineering. Written so people with little technical background can follow it. You do not need to know how to code.
 
 ## What you will be able to do
 
@@ -46,3 +46,4 @@ GitHub Pages from `/docs` on `main`.
 
 - Hub: [Dev SOPs](https://practical-office.github.io/dev-sops/)
 - Grok Build docs: https://docs.x.ai/build/overview
+- Living process: [docs/reference/GROK-BUILD-AGENTS-PROCESS.md](docs/reference/GROK-BUILD-AGENTS-PROCESS.md)

@@ -6,7 +6,7 @@ Teach the team how to build and run basic agents with Grok Build safely and cons
 
 ## Audience
 
-Team members with little to no technical background (Sales, Support, Ops) and technical staff who need a shared standard.
+Team members with little to no technical background (Sales, Support, Ops) and technical staff who need a shared standard. No coding knowledge is required.
 
 ## Core principles
 
@@ -26,4 +26,4 @@ Course modules must stay aligned with that document. If process changes, update 
 
 ## Relationship to other courses
 
-This course is independent of the Cursor + Matt Skills chain. It focuses on Grok Build as the tool. Team Work ticket types (BML / Bug / Update) remain unchanged.
+This course is focused on Grok Build as the tool for non-technical and mixed teams. Engineering work that uses Grok Build still follows the team’s normal engineering processes and ticket types (BML / Bug / Update).
