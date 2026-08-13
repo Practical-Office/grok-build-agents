@@ -27,17 +27,33 @@
         <section class="hero">
           <span class="status-chip">Module 1 of 5 · ~30 min</span>
           <h1>Safety Rules + <em>Plan Mode</em></h1>
-          <p class="hero-lede">This is the most important module. Everything else depends on it.</p>
+          <p class="hero-lede">This is the most important module. Everything else depends on it. All work happens inside the Grok Build CLI.</p>
         </section>
 
         <div class="hard-truth">
           <h3>Non-negotiable rule</h3>
           <p>For any non-trivial work, always tell Grok to use <strong>Plan Mode</strong>. Do not let it change files until you have read and approved the plan.</p>
         </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Where you work</p>
+          <ol>
+            <li>Open a terminal.</li>
+            <li>Go to your practice folder:</li>
+          </ol>
+          <pre><code>cd ~/grok-practice</code></pre>
+          <ol start="3">
+            <li>Start Grok:</li>
+          </ol>
+          <pre><code>grok</code></pre>
+          <p>All prompts below are pasted <strong>inside the Grok Build CLI</strong>.</p>
+        </div>
+
         <div class="section-card">
           <p class="eyebrow">Why safety comes first</p>
-          <p>Grok Build can read files, edit files, and run commands on your computer. That is powerful — and dangerous if you skip approval. Your job is to stay in control while it does useful work.</p>
+          <p>Grok Build can read files, edit files, and run commands on your computer. That is powerful — and dangerous if you skip approval. Your job is to stay in control.</p>
         </div>
+
         <div class="section-card">
           <p class="eyebrow">The six team rules</p>
           <div class="table-wrap">
@@ -54,32 +70,46 @@
             </table>
           </div>
         </div>
+
         <div class="section-card">
           <h3>How to force Plan Mode every time</h3>
+          <p>Paste this sentence at the end of every real request (inside Grok Build CLI):</p>
           <pre><code>Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
-          <p>Or type <code>/plan</code> inside Grok.</p>
-        </div>
-        <div class="section-card">
-          <h3>How to review a plan</h3>
-          <ul>
-            <li>Do I understand every step?</li>
-            <li>Is the scope limited to what I asked for?</li>
-            <li>Could this touch files or systems I do not want touched?</li>
-            <li>Is there a safer way?</li>
-          </ul>
-          <p>If any answer is “I’m not sure,” do not approve.</p>
-        </div>
-        <div class="section-card">
-          <p class="eyebrow">Practice lab (required)</p>
-          <pre><code>Create a short checklist called daily-habits.md with 5 simple habits for using Grok Build safely.
-Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
-          <ul class="checklist">
-            <li><label><input type="checkbox" data-progress="m1-c1" /> I explained Plan Mode in one sentence</label></li>
-            <li><label><input type="checkbox" data-progress="m1-c2" /> I completed the lab and approved the plan myself</label></li>
-          </ul>
+          <p>Or type this alone:</p>
+          <pre><code>/plan</code></pre>
         </div>
 
-        <div class="page-nav no-print" id="pageNav"></div>
+        <div class="section-card">
+          <h3>How to review a plan — example</h3>
+          <p>Imagine Grok shows a plan that says:</p>
+          <ol>
+            <li>Create daily-habits.md</li>
+            <li>Write 5 safety habits</li>
+            <li>Also update your calendar and email settings</li>
+          </ol>
+          <p><strong>Reject that plan.</strong> Step 3 is out of scope. Ask Grok to remove it, or paste:</p>
+          <pre><code>Revise the plan. Only create daily-habits.md with 5 habits. Do not touch calendar, email, or any other files.
+Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Practice lab (required) — paste into Grok Build CLI</p>
+          <pre><code>Create a short checklist file called daily-habits.md with exactly 5 simple habits for using Grok Build safely.
+Keep the file short and clear.
+Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
+          <ol>
+            <li>Read the plan. Confirm it only creates <code>daily-habits.md</code>.</li>
+            <li>Approve only if the scope is limited.</li>
+            <li>After it runs, open the file and confirm the 5 habits exist.</li>
+          </ol>
+        </div>
+
+        <div class="section-card checklist">
+          <p class="eyebrow">Success checklist (must complete)</p>
+            <label class="check-row"><input type="checkbox" data-progress="m1-c1" /> I can explain Plan Mode in one sentence</label>
+            <label class="check-row"><input type="checkbox" data-progress="m1-c2" /> I completed the lab and approved the plan myself</label>
+        </div>
+        <nav class="page-nav no-print" id="pageNav"></nav>
       </main>
     </div>
   </div>
