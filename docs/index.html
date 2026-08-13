@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grok Build Agents — Practical AI</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card: #121826;
+      --text: #e8eef7;
+      --muted: #9aabbf;
+      --accent: #38dff5;
+      --border: rgba(160, 176, 200, 0.16);
+      --green: #34d399;
+      --amber: #fbbf24;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    header { margin-bottom: 2.5rem; }
+    .eyebrow { color: var(--muted); font-size: 0.9rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    h1 { font-size: 2.1rem; margin: 0.4rem 0 0.75rem; line-height: 1.2; }
+    .lead { color: var(--muted); font-size: 1.1rem; max-width: 36rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.4rem;
+      margin: 1rem 0;
+    }
+    .card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+    .grid { display: grid; gap: 0.85rem; }
+    .start {
+      display: inline-block;
+      background: var(--accent);
+      color: #041018;
+      font-weight: 600;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      margin-top: 0.5rem;
+    }
+    .start:hover { text-decoration: none; opacity: 0.92; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    th, td { text-align: left; padding: 0.65rem 0.5rem; border-bottom: 1px solid var(--border); }
+    th { color: var(--muted); font-weight: 500; font-size: 0.85rem; }
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      background: rgba(56, 223, 245, 0.12);
+      color: var(--accent);
+    }
+    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">Practical AI · Team course</div>
+      <h1>Grok Build <em>Agents</em></h1>
+      <p class="lead">A clear, step-by-step course for building reliable AI agents with Grok Build. Written so anyone on the team can follow it.</p>
+      <a class="start" href="setup.html">Start with Setup →</a>
+    </header>
+
+    <div class="card">
+      <h3>Why this course exists</h3>
+      <p>Most people either under-use agents or let them run without control. This course installs one safe path: Plan Mode first, narrow scope, human approval, and reusable Skills.</p>
+    </div>
+
+    <h2>Course path</h2>
+    <p>Complete the pages in order. Setup is a hard gate — do not skip it.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Page</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>—</td>
+          <td><a href="setup.html">Setup</a> <span class="tag">Hard gate</span></td>
+          <td>25–35 min</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><a href="module-1.html">Safety Rules + Plan Mode</a></td>
+          <td>30 min</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><a href="module-2.html">Aim + Identity</a></td>
+          <td>35 min</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><a href="module-3.html">Equip + Narrow Scope</a></td>
+          <td>30 min</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><a href="module-4.html">First Real Agents (Labs)</a></td>
+          <td>60–90 min</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><a href="module-5.html">Trust Stages + Daily Habits</a></td>
+          <td>30 min</td>
+        </tr>
+        <tr>
+          <td>—</td>
+          <td><a href="quick-reference.html">Quick Reference</a></td>
+          <td>print</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>What you will leave able to do</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Install and run Grok Build safely</h3>
+        <p>Open a terminal, start a session, and complete a real task with Plan Mode.</p>
+      </div>
+      <div class="card">
+        <h3>Use the AGENT framework</h3>
+        <p>Aim → Give identity → Equip → Narrow → Trust — in the right order every time.</p>
+      </div>
+      <div class="card">
+        <h3>Keep agents under control</h3>
+        <p>Narrow scope, staged trust, and clear stop rules so nothing runs wild.</p>
+      </div>
+      <div class="card">
+        <h3>Reuse what works</h3>
+        <p>Turn good results into Skills the whole team can use.</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><a href="https://practical-office.github.io/dev-sops/">← Back to Dev SOPs hub</a></p>
+      <p>Living process: <a href="reference/GROK-BUILD-AGENTS-PROCESS.md">GROK-BUILD-AGENTS-PROCESS.md</a></p>
+    </div>
+  </div>
+</body>
+</html>
