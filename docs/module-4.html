@@ -27,47 +27,79 @@
         <section class="hero">
           <span class="status-chip">Module 4 of 5 · 60–90 min</span>
           <h1>First Real Agents <em>(Labs)</em></h1>
-          <p class="hero-lede">Build two small, useful agents. Keep them narrow and always use Plan Mode.</p>
+          <p class="hero-lede">Build two small, useful agents in separate folders. Always use Plan Mode inside the Grok Build CLI.</p>
         </section>
 
         <div class="section-card">
-          <p class="eyebrow">Before you start</p>
-          <p>Create a fresh folder for each lab. Do not mix agents in the same folder.</p>
+          <p class="eyebrow">Before you start — create separate folders</p>
+          <p>In the terminal (not inside Grok), run:</p>
+          <pre><code>mkdir -p ~/agents/daily-tracker
+mkdir -p ~/agents/follow-up-helper</code></pre>
+          <p>Each lab uses its own folder. Do not mix agents.</p>
         </div>
+
         <div class="section-card">
-          <h3>Lab A — Daily Activity Tracker</h3>
+          <p class="eyebrow">Lab A — Daily Activity Tracker</p>
           <p><strong>Outcome:</strong> A simple checklist for calls, emails, meetings, and notes.</p>
-          <pre><code>Build a clean daily activity tracker as a markdown file.
+          <p><strong>Where:</strong></p>
+          <pre><code>cd ~/agents/daily-tracker
+grok</code></pre>
+          <p><strong>Paste into Grok Build CLI:</strong></p>
+          <pre><code>Build a clean daily activity tracker as a markdown file called daily-activity.md.
 Sections: Calls, Emails, Meetings, Notes, Top priority for tomorrow.
-Keep it simple and easy to fill out.
-Use Plan Mode. Do not make changes until I approve.</code></pre>
-          <p>After it works: review → one improvement → <code>/skillify</code> as <code>daily-activity-tracker</code>.</p>
+Keep it simple and easy to fill out by hand each day.
+Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
+          <ol>
+            <li>Approve only if the plan creates that one file with those sections.</li>
+            <li>Open the file and confirm it is usable.</li>
+            <li>Then paste:</li>
+          </ol>
+          <pre><code>Improve daily-activity.md with one small improvement only (for example clearer section headers).
+Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
+          <p>After it works, save the skill:</p>
+          <pre><code>/skillify</code></pre>
+          <p>When asked for a name, use: <code>daily-activity-tracker</code></p>
         </div>
+
         <div class="section-card">
-          <h3>Lab B — Follow-up Helper</h3>
+          <p class="eyebrow">Lab B — Follow-up Helper</p>
           <p><strong>Outcome:</strong> Given short notes, produce a clear professional follow-up message.</p>
-          <pre><code>Create a simple follow-up helper.
+          <p><strong>Where:</strong></p>
+          <pre><code>cd ~/agents/follow-up-helper
+grok</code></pre>
+          <p><strong>Paste into Grok Build CLI:</strong></p>
+          <pre><code>Create a simple follow-up helper in this folder.
 I will give you 2–4 bullet points about a conversation.
 You return a short, clear follow-up message I can send.
 Tone: professional, direct, no fluff.
-Use Plan Mode. Do not make changes until I approve.</code></pre>
-          <p>Test with two real (non-sensitive) examples.</p>
+Write a short IDENTITY.md with that job description and hard boundary: draft messages only, never send.
+Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
+          <p>After the plan is approved and files exist, test with a non-sensitive example:</p>
+          <pre><code>Using the follow-up helper rules, draft a message from these notes:
+- Met with Alex about project timeline
+- They asked for a revised delivery date next Friday
+- I agreed to send an update by Wednesday
+
+Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
+          <p>Run a second real (non-sensitive) example the same way. Do not use client or personal data you would not share with a colleague.</p>
         </div>
+
         <div class="section-card">
-          <h3>Best practices while building</h3>
+          <p class="eyebrow">Best practices while building</p>
           <ul>
             <li>One change at a time.</li>
             <li>Always re-state “Use Plan Mode” on new requests.</li>
-            <li>If the plan is long or unclear, ask Grok to simplify it.</li>
-            <li>Save working versions.</li>
-          </ul>
-          <ul class="checklist">
-            <li><label><input type="checkbox" data-progress="m4-c1" /> Lab A complete + skill saved</label></li>
-            <li><label><input type="checkbox" data-progress="m4-c2" /> Lab B complete</label></li>
+            <li>If the plan is long or unclear, paste: <code>Simplify the plan. Keep only the minimum steps. Use Plan Mode.</code></li>
+            <li>Keep each agent in its own folder.</li>
           </ul>
         </div>
 
-        <div class="page-nav no-print" id="pageNav"></div>
+        <div class="section-card checklist">
+          <p class="eyebrow">Success checklist (must complete)</p>
+            <label class="check-row"><input type="checkbox" data-progress="m4-c1" /> Lab A complete + skill saved</label>
+            <label class="check-row"><input type="checkbox" data-progress="m4-c2" /> Lab B complete</label>
+        </div>
+        <nav class="page-nav no-print" id="pageNav"></nav>
       </main>
     </div>
   </div>
