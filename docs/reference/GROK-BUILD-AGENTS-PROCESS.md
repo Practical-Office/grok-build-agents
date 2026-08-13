@@ -1,6 +1,6 @@
 # Grok Build Agents — Living Process
 
-**Version:** 2.1  
+**Version:** 2.2  
 **Last Updated:** 2026-08-13  
 **Owner:** Practical AI Engineering  
 **Purpose:** Source of truth for how the team builds and runs agents with Grok Build. Course modules must lag this document.
@@ -42,16 +42,16 @@ Use this sequence for every new agent:
 
 ## 5. Standard Workflow
 
-1. Create a dedicated folder for the agent (example: `agents/inbox-helper/`).
-2. Open a terminal in that folder and run `grok`.
-3. State the goal and explicitly say:  
+1. Create a dedicated folder for the agent on your computer (example: `~/agents/inbox-helper/`).
+2. In the terminal: `cd` into that folder, then run `grok`.
+3. Inside the **Grok Build CLI**, paste your goal and always end with:  
    `Use Plan Mode. Do not make any changes until I approve the plan.`
 4. Read the plan carefully.
 5. Approve only if every step is clear and safe.
 6. Let Grok execute.
 7. Test the result yourself against the Definition of Done.
-8. If the result is useful, run `/skillify` to save it.
-9. Write or update an `AGENTS.md` file in the folder with the agent’s boundaries and current trust stage.
+8. If the result is useful, run `/skillify` inside Grok to save it.
+9. Write or update an `AGENTS.md` file in the folder with the agent’s boundaries and current trust stage (via Plan Mode).
 
 ## 6. Trust Stages
 
