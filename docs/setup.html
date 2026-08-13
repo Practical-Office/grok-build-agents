@@ -1,135 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Setup — Grok Build Agents</title>
-  <style>
-    :root {
-      --bg: #0b0f19; --card: #121826; --text: #e8eef7; --muted: #9aabbf;
-      --accent: #38dff5; --border: rgba(160, 176, 200, 0.16); --warn: #fbbf24; --ok: #34d399;
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 17px; line-height: 1.65; }
-    a { color: var(--accent); }
-    .wrap { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
-    .nav { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
-    h1 { font-size: 1.9rem; margin: 0.3rem 0 0.6rem; }
-    .lead { color: var(--muted); margin-bottom: 1.5rem; }
-    h2 { margin-top: 2.2rem; font-size: 1.25rem; }
-    .callout {
-      background: var(--card); border: 1px solid var(--border); border-radius: 10px;
-      padding: 1rem 1.2rem; margin: 1.2rem 0;
-    }
-    .callout.warn { border-color: rgba(251, 191, 36, 0.35); }
-    .callout.ok { border-color: rgba(52, 211, 153, 0.35); }
-    .mark { font-weight: 600; margin-bottom: 0.35rem; }
-    pre, code {
-      font-family: ui-monospace, "JetBrains Mono", Menlo, monospace;
-      font-size: 0.9rem;
-    }
-    pre {
-      background: #080c14; border: 1px solid var(--border); border-radius: 8px;
-      padding: 0.9rem 1rem; overflow-x: auto;
-    }
-    ol.steps { padding-left: 1.2rem; }
-    ol.steps li { margin-bottom: 1rem; }
-    .see {
-      background: rgba(56, 223, 245, 0.08); border-left: 3px solid var(--accent);
-      padding: 0.7rem 1rem; margin: 0.8rem 0; border-radius: 0 8px 8px 0;
-    }
-    .checklist { list-style: none; padding: 0; }
-    .checklist li { padding: 0.4rem 0 0.4rem 1.6rem; position: relative; }
-    .checklist li::before { content: "☐"; position: absolute; left: 0; color: var(--accent); }
-    .footer { margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
-  </style>
+  <link rel="icon" href="https://practical-office.github.io/Cursor-AI-dev/assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://practical-office.github.io/Cursor-AI-dev/css/cursor-ai-dev.css" />
 </head>
-<body>
-  <div class="wrap">
-    <div class="nav"><a href="index.html">← Course home</a> · Setup · Hard gate</div>
+<body data-page="setup" data-base="" data-file="setup.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Setup</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="themeToggle">Theme</button>
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+        <section class="hero">
+          <span class="status-chip">Pre-requisite · hard gate · ~25–35 min</span>
+          <h1>Skills <em>setup</em></h1>
+          <p class="hero-lede">Install Grok Build, sign in, and prove it works. Do not start Module 1 until this page is complete.</p>
+        </section>
 
-    <h1>Setup</h1>
-    <p class="lead">Install Grok Build, sign in, and prove it works. Do not start Module 1 until this page is complete.</p>
-
-    <div class="callout warn">
-      <div class="mark">Hard gate</div>
-      <p>You must finish every step below and confirm the checklist at the end. If install fails, stop and get help. Do not skip ahead.</p>
-    </div>
-
-    <h2>1. What you need</h2>
-    <ul>
-      <li>A computer (macOS, Windows, or Linux)</li>
-      <li>Internet connection</li>
-      <li>Permission to install software (ask IT if you are on a work machine)</li>
-      <li>A Grok / SuperGrok or X Premium+ account that can use Grok Build</li>
-    </ul>
-    <p>You do <strong>not</strong> need to know how to code.</p>
-
-    <h2>2. Open a terminal</h2>
-    <p>A terminal is a text window where you type commands.</p>
-    <ul>
-      <li><strong>macOS:</strong> Press Cmd + Space, type <code>Terminal</code>, press Enter.</li>
-      <li><strong>Windows:</strong> Use <strong>PowerShell</strong> or install <a href="https://gitforwindows.org/" target="_blank">Git for Windows</a> and open Git Bash.</li>
-      <li><strong>Linux:</strong> Open your Terminal app (often Ctrl + Alt + T).</li>
-    </ul>
-    <div class="see"><strong>What you will see:</strong> A window with a blinking cursor. That is normal.</div>
-
-    <h2>3. Install Grok Build</h2>
-    <p>Copy the command for your system, paste it into the terminal, and press Enter.</p>
-
-    <p><strong>macOS / Linux / Git Bash:</strong></p>
-    <pre><code>curl -fsSL https://x.ai/cli/install.sh | bash</code></pre>
-
-    <p><strong>Windows PowerShell:</strong></p>
-    <pre><code>irm https://x.ai/cli/install.ps1 | iex</code></pre>
-
-    <div class="see"><strong>What success looks like:</strong> The script finishes without a big red error. If you see “command not found: grok” afterward, close the terminal completely, open a new one, and try the next step.</div>
-
-    <h2>4. Check the install</h2>
-    <p>In a <strong>new</strong> terminal window, run:</p>
-    <pre><code>grok --version</code></pre>
-    <p>You should see a version number. Write it down.</p>
-
-    <h2>5. Sign in</h2>
-    <ol class="steps">
-      <li>Type <code>grok</code> and press Enter.</li>
-      <li>A browser window should open. Sign in with your account.</li>
-      <li>Return to the terminal. You should now see the Grok interface (history area + typing box at the bottom).</li>
-    </ol>
-    <div class="see"><strong>What you will see:</strong> A full-screen (or nearly full-screen) Grok session ready for you to type.</div>
-
-    <h2>6. Run the official short tour</h2>
-    <p>Inside Grok, type:</p>
-    <pre><code>/tour</code></pre>
-    <p>(Same as <code>/tutorial</code> or <code>/onboarding</code>.)</p>
-    <p>Walk through the short tips. Press the arrow keys or follow the on-screen instructions. This takes a few minutes and is required.</p>
-
-    <h2>7. First proof it works</h2>
-    <p>Still inside Grok, type exactly this:</p>
-    <pre><code>Create a file called hello.txt that contains the sentence: Grok Build is working.
+        <div class="hard-truth">
+          <h3>Hard gate</h3>
+          <p>You must finish every step below and confirm the checklist at the end. If install fails, stop and get help. Do not skip ahead.</p>
+        </div>
+        <div class="section-card">
+          <p class="eyebrow">What you need</p>
+          <ul>
+            <li>A computer (macOS, Windows, or Linux)</li>
+            <li>Internet connection</li>
+            <li>Permission to install software (ask IT if on a work machine)</li>
+            <li>A Grok / SuperGrok or X Premium+ account that can use Grok Build</li>
+          </ul>
+          <p>You do <strong>not</strong> need to know how to code.</p>
+        </div>
+        <div class="section-card">
+          <p class="eyebrow">Exact steps</p>
+          <h3>1. Open a terminal</h3>
+          <ul>
+            <li><strong>macOS:</strong> Cmd + Space → <code>Terminal</code></li>
+            <li><strong>Windows:</strong> PowerShell or Git Bash</li>
+            <li><strong>Linux:</strong> Terminal app</li>
+          </ul>
+        </div>
+        <div class="section-card">
+          <h3>2. Install Grok Build</h3>
+          <p><strong>macOS / Linux / Git Bash:</strong></p>
+          <pre><code>curl -fsSL https://x.ai/cli/install.sh | bash</code></pre>
+          <p><strong>Windows PowerShell:</strong></p>
+          <pre><code>irm https://x.ai/cli/install.ps1 | iex</code></pre>
+        </div>
+        <div class="section-card">
+          <h3>3. Check the install</h3>
+          <pre><code>grok --version</code></pre>
+          <p>You should see a version number.</p>
+        </div>
+        <div class="section-card">
+          <h3>4. Sign in</h3>
+          <ol>
+            <li>Type <code>grok</code> and press Enter.</li>
+            <li>Sign in in the browser that opens.</li>
+            <li>Return to the terminal — you should see the Grok interface.</li>
+          </ol>
+        </div>
+        <div class="section-card">
+          <h3>5. Run the official short tour</h3>
+          <pre><code>/tour</code></pre>
+          <p>Walk through the tips. Required.</p>
+        </div>
+        <div class="section-card">
+          <h3>6. First proof it works</h3>
+          <pre><code>Create a file called hello.txt that contains the sentence: Grok Build is working.
 Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
-    <p>Then:</p>
-    <ol class="steps">
-      <li>Read the plan Grok shows you.</li>
-      <li>Approve it only if it makes sense.</li>
-      <li>Confirm the file <code>hello.txt</code> was created and contains the correct sentence.</li>
-    </ol>
+          <ol>
+            <li>Read the plan.</li>
+            <li>Approve only if it makes sense.</li>
+            <li>Confirm <code>hello.txt</code> exists with the correct sentence.</li>
+          </ol>
+        </div>
+        <div class="section-card">
+          <p class="eyebrow">Success checklist</p>
+          <ul class="checklist">
+            <li><label><input type="checkbox" data-progress="setup-c1" /> <code>grok --version</code> works</label></li>
+            <li><label><input type="checkbox" data-progress="setup-c2" /> Signed in to Grok</label></li>
+            <li><label><input type="checkbox" data-progress="setup-c3" /> Completed <code>/tour</code></label></li>
+            <li><label><input type="checkbox" data-progress="setup-c4" /> Created <code>hello.txt</code> with Plan Mode</label></li>
+          </ul>
+        </div>
 
-    <div class="callout ok">
-      <div class="mark">Success checklist (all required)</div>
-      <ul class="checklist">
-        <li><code>grok --version</code> shows a version number</li>
-        <li>You can open Grok and sign in</li>
-        <li>You completed <code>/tour</code></li>
-        <li>You created <code>hello.txt</code> using Plan Mode and approved the plan yourself</li>
-      </ul>
-    </div>
-
-    <p>When every box is done, go to Module 1.</p>
-
-    <div class="footer">
-      <p><a href="index.html">← Course home</a> · <a href="module-1.html">Next: Module 1 →</a></p>
+        <div class="page-nav no-print" id="pageNav"></div>
+      </main>
     </div>
   </div>
+  <script src="js/grok-build-agents.js"></script>
 </body>
 </html>
