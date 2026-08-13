@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quick Reference — Grok Build Agents</title>
+  <style>
+    :root {
+      --bg: #0b0f19; --card: #121826; --text: #e8eef7; --muted: #9aabbf;
+      --accent: #38dff5; --border: rgba(160, 176, 200, 0.16);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55; }
+    a { color: var(--accent); }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+    h1 { font-size: 1.6rem; margin: 0 0 1rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.6rem; margin-bottom: 0.5rem; }
+    pre, code { font-family: ui-monospace, Menlo, monospace; font-size: 0.85rem; }
+    pre { background: #080c14; border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 0.9rem; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; margin: 0.6rem 0 1rem; }
+    th, td { text-align: left; padding: 0.45rem 0.35rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { color: var(--muted); font-size: 0.8rem; }
+    ul { margin: 0.4rem 0; padding-left: 1.2rem; }
+    .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p><a href="index.html">← Course home</a></p>
+    <h1>Quick Reference</h1>
+    <p>Print this page or keep it open while you work.</p>
+
+    <h2>Always say this</h2>
+    <pre><code>Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
+
+    <h2>AGENT framework</h2>
+    <table>
+      <tr><th>A</th><td>Aim — outcome + Definition of Done</td></tr>
+      <tr><th>G</th><td>Give identity — SOUL, IDENTITY, USER</td></tr>
+      <tr><th>E</th><td>Equip — context, tools, playbooks</td></tr>
+      <tr><th>N</th><td>Narrow — one agent, one lane</td></tr>
+      <tr><th>T</th><td>Trust — stages 1 → 4, never jump</td></tr>
+    </table>
+
+    <h2>Six team rules</h2>
+    <ol>
+      <li>Plan Mode for non-trivial work</li>
+      <li>Never approve what you do not understand</li>
+      <li>One agent = one job</li>
+      <li>No money / client data / external systems until proven</li>
+      <li>If unsure → stop and ask</li>
+      <li>Save good work with <code>/skillify</code></li>
+    </ol>
+
+    <h2>Useful commands</h2>
+    <table>
+      <tr><td><code>grok</code></td><td>Start a session</td></tr>
+      <tr><td><code>/plan</code></td><td>Force Plan Mode</td></tr>
+      <tr><td><code>/tour</code></td><td>Official short tour</td></tr>
+      <tr><td><code>/skillify</code></td><td>Save current work as a skill</td></tr>
+      <tr><td><code>grok --version</code></td><td>Check install</td></tr>
+    </table>
+
+    <h2>Trust stages</h2>
+    <table>
+      <tr><th>1</th><td>Propose only — you approve everything</td></tr>
+      <tr><th>2</th><td>Draft / sort — you review before use</td></tr>
+      <tr><th>3</th><td>Limited actions — you spot-check</td></tr>
+      <tr><th>4</th><td>Scheduled work — you monitor</td></tr>
+    </table>
+
+    <h2>Stop if</h2>
+    <ul>
+      <li>Plan is unclear or too broad</li>
+      <li>Agent wants access you are not comfortable giving</li>
+      <li>Results look wrong</li>
+      <li>You cannot explain what it is about to do</li>
+    </ul>
+
+    <div class="footer">
+      <p>Living process: <a href="reference/GROK-BUILD-AGENTS-PROCESS.md">GROK-BUILD-AGENTS-PROCESS.md</a></p>
+    </div>
+  </div>
+</body>
+</html>

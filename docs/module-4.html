@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Module 4 — First Real Agents | Grok Build Agents</title>
+  <style>
+    :root {
+      --bg: #0b0f19; --card: #121826; --text: #e8eef7; --muted: #9aabbf;
+      --accent: #38dff5; --border: rgba(160, 176, 200, 0.16); --ok: #34d399;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 17px; line-height: 1.65; }
+    a { color: var(--accent); }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
+    .nav { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    h1 { font-size: 1.9rem; margin: 0.3rem 0 0.6rem; }
+    .lead { color: var(--muted); margin-bottom: 1.5rem; }
+    h2 { margin-top: 2.2rem; font-size: 1.25rem; }
+    .callout { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; margin: 1.2rem 0; }
+    .callout.ok { border-color: rgba(52, 211, 153, 0.35); }
+    .mark { font-weight: 600; margin-bottom: 0.35rem; }
+    pre, code { font-family: ui-monospace, Menlo, monospace; font-size: 0.9rem; }
+    pre { background: #080c14; border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1rem; overflow-x: auto; }
+    .lab { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.3rem; margin: 1.3rem 0; }
+    .footer { margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav"><a href="index.html">← Course home</a> · Module 4 of 5</div>
+
+    <h1>Module 4 — First Real Agents (Labs)</h1>
+    <p class="lead">Build two small, useful agents using everything you have learned. Keep them narrow and always use Plan Mode.</p>
+
+    <div class="callout">
+      <div class="mark">Before you start</div>
+      <p>Create a fresh folder for each lab. Do not mix agents in the same folder.</p>
+    </div>
+
+    <h2>Lab A — Daily Activity Tracker</h2>
+    <div class="lab">
+      <p><strong>Outcome:</strong> A simple checklist you can fill out each day for calls, emails, meetings, and notes.</p>
+      <p><strong>Prompt starter:</strong></p>
+      <pre><code>Build a clean daily activity tracker as a markdown file.
+Sections: Calls, Emails, Meetings, Notes, Top priority for tomorrow.
+Keep it simple and easy to fill out.
+Use Plan Mode. Do not make changes until I approve.</code></pre>
+      <p>After it works:</p>
+      <ol>
+        <li>Review the file.</li>
+        <li>Make one improvement (ask Grok with Plan Mode).</li>
+        <li>Run <code>/skillify</code> and name the skill something clear like <code>daily-activity-tracker</code>.</li>
+      </ol>
+    </div>
+
+    <h2>Lab B — Follow-up Helper</h2>
+    <div class="lab">
+      <p><strong>Outcome:</strong> Given a short note about a conversation, the agent produces a clear follow-up message in a professional tone.</p>
+      <p><strong>Prompt starter:</strong></p>
+      <pre><code>Create a simple follow-up helper.
+I will give you 2–4 bullet points about a conversation.
+You return a short, clear follow-up message I can send.
+Tone: professional, direct, no fluff.
+Use Plan Mode. Do not make changes until I approve.</code></pre>
+      <p>Test it with two real (non-sensitive) examples from your work. Adjust the identity/playbook until the output feels right.</p>
+    </div>
+
+    <h2>Best practices while building</h2>
+    <ul>
+      <li>One change at a time.</li>
+      <li>Always re-state “Use Plan Mode” on new requests.</li>
+      <li>If the plan is long or unclear, ask Grok to simplify it.</li>
+      <li>Save working versions. Do not keep editing the only copy until it breaks.</li>
+    </ul>
+
+    <div class="callout ok">
+      <div class="mark">Done when</div>
+      <p>You have finished both labs, each agent is in its own folder, and at least one useful skill has been saved with <code>/skillify</code>.</p>
+    </div>
+
+    <div class="footer">
+      <p><a href="module-3.html">← Module 3</a> · <a href="module-5.html">Next: Module 5 →</a></p>
+    </div>
+  </div>
+</body>
+</html>
