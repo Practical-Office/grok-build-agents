@@ -25,7 +25,7 @@
       </header>
       <main class="content" id="top">
         <section class="hero">
-          <span class="status-chip">Module 3 of 5 · ~30 min</span>
+          <span class="status-chip">Module 3 of 5 · ~20–25 min</span>
           <h1>Equip + <em>Narrow Scope</em></h1>
           <p class="hero-lede">An agent with a clear goal still needs the right context and a tight boundary. All work is in the Grok Build CLI.</p>
         </section>
@@ -34,7 +34,7 @@
           <p class="eyebrow">Where you work</p>
           <pre><code>cd ~/grok-practice
 grok</code></pre>
-          <p>All prompts below are pasted into the <strong>Grok Build CLI</strong>.</p>
+          <p>Start a <strong>new</strong> <code>grok</code> session for this module. All prompts below are pasted into the <strong>Grok Build CLI</strong>.</p>
         </div>
 
         <div class="section-card">
@@ -87,18 +87,14 @@ Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
         </div>
 
         <div class="section-card">
-          <p class="eyebrow">Manager agent (only when needed)</p>
-          <p>If you later need coordination across several narrow agents, you can create a Manager. Do not start here. Example prompt for later:</p>
-          <pre><code>You are my Manager agent. You never do any task yourself.
-When a job comes in, assign a dedicated sub-agent for that one job.
-One agent, one lane. Coordinate and report back to me.
-Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
+          <p class="eyebrow">Manager agents (later — not in this course)</p>
+          <p>After you have at least two narrow agents in separate folders, you may later add a <strong>Manager</strong> that routes jobs to the right folder. A Manager never does the work itself — you still open the worker folder and use Plan Mode there. The core course does not include a Manager build lab. See the <a href="https://github.com/Practical-Office/grok-build-agents/blob/main/docs/reference/GROK-BUILD-AGENTS-PROCESS.md#11-manager-agents-later">living process</a> for the full rule.</p>
         </div>
 
         <div class="section-card checklist">
           <p class="eyebrow">Success checklist (must complete)</p>
-            <label class="check-row"><input type="checkbox" data-progress="m3-c1" /> Playbook + boundary written</label>
-            <label class="check-row"><input type="checkbox" data-progress="m3-c2" /> AGENTS.md created</label>
+            <label class="check-row"><input type="checkbox" data-progress="m3-c1" /> inbox-playbook.md exists and IDENTITY.md boundaries updated</label>
+            <label class="check-row"><input type="checkbox" data-progress="m3-c2" /> AGENTS.md exists with team rules, one-lane rule, and Trust Stage 1</label>
         </div>
         <nav class="page-nav no-print" id="pageNav"></nav>
       </main>

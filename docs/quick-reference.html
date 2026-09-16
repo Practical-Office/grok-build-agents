@@ -34,12 +34,14 @@
         <div class="hard-truth">
           <h3>Always paste this with real requests</h3>
           <pre><code>Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
+          <p>Or type <code>/plan</code>, or press <strong>Shift+Tab</strong>. After you approve, Grok may leave Plan Mode — return before your next ask.</p>
         </div>
 
         <div class="section-card">
           <p class="eyebrow">Start a session (terminal)</p>
           <pre><code>cd ~/agents/your-agent-name
 grok</code></pre>
+          <p>New <code>grok</code> session per agent folder.</p>
         </div>
 
         <div class="section-card">
@@ -55,6 +57,7 @@ grok</code></pre>
               </tbody>
             </table>
           </div>
+          <p>SOUL / IDENTITY / USER = who the agent is. AGENTS.md = rules, boundaries, trust stage, stop conditions.</p>
         </div>
 
         <div class="section-card">
@@ -64,7 +67,7 @@ grok</code></pre>
             <li>Never approve what you do not understand</li>
             <li>One agent = one job</li>
             <li>No money / client data / external systems until proven</li>
-            <li>If unsure → stop and ask</li>
+            <li>If unsure → stop and ask a human</li>
             <li>Save good work with <code>/skillify</code></li>
           </ol>
         </div>
@@ -85,7 +88,7 @@ grok</code></pre>
         </div>
 
         <div class="section-card">
-          <p class="eyebrow">Trust stages</p>
+          <p class="eyebrow">Trust stages + promotion gates</p>
           <div class="table-wrap">
             <table>
               <tbody>
@@ -96,15 +99,37 @@ grok</code></pre>
               </tbody>
             </table>
           </div>
+          <p><strong>Gates:</strong> 3 good runs → Stage 2 · 5 good outputs, zero violations → Stage 3 · 2 weeks, no escalations → Stage 4 candidate · team lead approval for Stage 4</p>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Ask the AI first</p>
+          <ul>
+            <li>Long plan → <code>Simplify the plan. Keep only the minimum steps. Use Plan Mode.</code></li>
+            <li>Almost right → one small fix only</li>
+            <li>Missing boundary → update IDENTITY or AGENTS.md</li>
+            <li>Worked once → <code>/skillify</code></li>
+          </ul>
         </div>
 
         <div class="hard-truth">
-          <h3>Stop if</h3>
+          <h3>Escalate to a human if</h3>
           <ul>
-            <li>Plan is unclear or too broad</li>
+            <li>Plan is unclear or too broad (after one clarify attempt)</li>
             <li>Agent wants access you are not comfortable giving</li>
-            <li>Results look wrong</li>
+            <li>Results look wrong or inconsistent</li>
             <li>You cannot explain what it is about to do</li>
+            <li>Install or permissions fail</li>
+          </ul>
+          <p>Stop the agent. Ask a person with the folder path and what you tried.</p>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">After the course</p>
+          <ul>
+            <li><strong>Ritual:</strong> one named agent for a recurring daily or weekly job</li>
+            <li><strong>On demand:</strong> <code>cd</code> to the right folder, new <code>grok</code> session</li>
+            <li><strong>Manager (later):</strong> routes to agent folders only — never does the work</li>
           </ul>
         </div>
 

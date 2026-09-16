@@ -35,7 +35,7 @@
           <p>In the terminal (not inside Grok), run:</p>
           <pre><code>mkdir -p ~/agents/daily-tracker
 mkdir -p ~/agents/follow-up-helper</code></pre>
-          <p>Each lab uses its own folder. Do not mix agents.</p>
+          <p>Each lab uses its own folder. Do not mix agents. Start a <strong>new</strong> <code>grok</code> session in each lab folder.</p>
         </div>
 
         <div class="section-card">
@@ -62,19 +62,28 @@ Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
         </div>
 
         <div class="section-card">
-          <p class="eyebrow">Lab B — Follow-up Helper</p>
-          <p><strong>Outcome:</strong> Given short notes, produce a clear professional follow-up message.</p>
+          <p class="eyebrow">Lab B — Follow-up Helper (your graduate agent)</p>
+          <p><strong>Outcome:</strong> A complete Stage-1 agent folder. Given short notes, it produces a clear professional follow-up draft. This is the agent you will hand off in Module 5.</p>
           <p><strong>Where:</strong></p>
           <pre><code>cd ~/agents/follow-up-helper
 grok</code></pre>
-          <p><strong>Paste into Grok Build CLI:</strong></p>
-          <pre><code>Create a simple follow-up helper in this folder.
-I will give you 2–4 bullet points about a conversation.
-You return a short, clear follow-up message I can send.
-Tone: professional, direct, no fluff.
-Write a short IDENTITY.md with that job description and hard boundary: draft messages only, never send.
+          <p><strong>Step 1 — build the full agent skeleton. Paste into Grok Build CLI:</strong></p>
+          <pre><code>Build a follow-up helper agent in this folder.
+
+Aim: Given 2–4 bullet points about a conversation, produce a short, clear follow-up message I can send.
+Definition of Done: A draft message in my voice, professional and direct, ready for me to review before sending.
+
+Create these files:
+1. aim.md — one-sentence Aim + Definition of Done
+2. SOUL.md — personality, tone, values
+3. IDENTITY.md — role, job description, hard boundaries (draft messages only; never send; never touch files outside this folder)
+4. USER.md — about me: role, priorities, preferences
+5. AGENTS.md — the six team rules, this agent's one-lane rule (follow-up drafts only), Trust Stage 1 (propose only), and stop conditions
+
+Ask me any clarifying questions first.
 Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
-          <p>After the plan is approved and files exist, test with a non-sensitive example:</p>
+          <p>Read the plan. Approve only if it creates those files and nothing outside this folder. Open each file and confirm boundaries are explicit.</p>
+          <p><strong>Step 2 — test with a non-sensitive example:</strong></p>
           <pre><code>Using the follow-up helper rules, draft a message from these notes:
 - Met with Alex about project timeline
 - They asked for a revised delivery date next Friday
@@ -96,8 +105,8 @@ Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
 
         <div class="section-card checklist">
           <p class="eyebrow">Success checklist (must complete)</p>
-            <label class="check-row"><input type="checkbox" data-progress="m4-c1" /> Lab A complete + skill saved</label>
-            <label class="check-row"><input type="checkbox" data-progress="m4-c2" /> Lab B complete</label>
+            <label class="check-row"><input type="checkbox" data-progress="m4-c1" /> Lab A: daily-activity.md exists + daily-activity-tracker skill saved</label>
+            <label class="check-row"><input type="checkbox" data-progress="m4-c2" /> Lab B: aim.md, SOUL.md, IDENTITY.md, USER.md, and AGENTS.md (Trust Stage 1) exist; two test drafts reviewed</label>
         </div>
         <nav class="page-nav no-print" id="pageNav"></nav>
       </main>

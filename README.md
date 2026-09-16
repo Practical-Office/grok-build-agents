@@ -16,19 +16,20 @@ Anyone on the team who needs to build or run basic agents — Sales, Support, Op
 - Build simple, useful agents without creating mess
 - Turn good work into reusable Skills
 - Follow team safety rules so agents stay under control
+- Hand off a complete Stage-1 agent folder to a teammate
 
 ## Course structure
 
 | Page | Purpose |
 |------|---------|
-| [Setup](docs/setup.html) | Hard gate — install + first success |
-| Module 1 | Safety rules + Plan Mode |
-| Module 2 | Aim + Identity |
-| Module 3 | Equip + Narrow scope |
-| Module 4 | First real agents (labs) |
-| Module 5 | Trust stages + daily habits |
-| Quick Reference | One-page lookup |
-| Process doc | Living source of truth |
+| [Setup](docs/setup.html) | Complete before Module 1 — install + first success |
+| [Module 1](docs/module-1.html) | Safety rules + Plan Mode |
+| [Module 2](docs/module-2.html) | Aim + Identity |
+| [Module 3](docs/module-3.html) | Equip + Narrow scope |
+| [Module 4](docs/module-4.html) | First real agents (labs) |
+| [Module 5](docs/module-5.html) | Trust stages + daily habits |
+| [Quick Reference](docs/quick-reference.html) | One-page lookup |
+| [Process doc](docs/reference/GROK-BUILD-AGENTS-PROCESS.md) | Living source of truth |
 
 ## Local preview
 
