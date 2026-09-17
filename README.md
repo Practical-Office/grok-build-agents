@@ -29,7 +29,8 @@ Anyone on the team who needs to build or run basic agents — Sales, Support, Op
 | [Module 4](docs/module-4.html) | First real agents (labs) |
 | [Module 5](docs/module-5.html) | Trust stages + daily habits |
 | [Quick Reference](docs/quick-reference.html) | One-page lookup |
-| [Process doc](docs/reference/GROK-BUILD-AGENTS-PROCESS.md) | Living source of truth |
+| [Living process](docs/process.html) | Source of truth (learners) |
+| [Manager](docs/manager.html) | Optional coordination agent (after the course) |
 
 ## Local preview
 
@@ -47,4 +48,4 @@ GitHub Pages from `/docs` on `main`.
 
 - Hub: [Dev SOPs](https://practical-office.github.io/dev-sops/)
 - Grok Build docs: https://docs.x.ai/build/overview
-- Living process: [docs/reference/GROK-BUILD-AGENTS-PROCESS.md](docs/reference/GROK-BUILD-AGENTS-PROCESS.md)
+- Living process (edit source): [docs/reference/GROK-BUILD-AGENTS-PROCESS.md](docs/reference/GROK-BUILD-AGENTS-PROCESS.md)

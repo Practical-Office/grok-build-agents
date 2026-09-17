@@ -29,8 +29,8 @@
   ];
 
   const HUB_URL = "https://practical-office.github.io/dev-sops/";
-  const LIVING_PROCESS_URL =
-    "https://github.com/Practical-Office/grok-build-agents/blob/main/docs/reference/GROK-BUILD-AGENTS-PROCESS.md";
+  const PROCESS_PATH = "process.html";
+  const MANAGER_PATH = "manager.html";
   const REPO_URL = "https://github.com/Practical-Office/grok-build-agents";
 
   const body = document.body;
@@ -117,9 +117,11 @@
         ${moduleLinks}
         <p class="nav-section-label">Reference</p>
         <a class="nav-link${pageId === "quick-reference" ? " is-active" : ""}" data-module="quick-reference" href="${href("quick-reference.html")}"><span class="nav-num">⚡</span> Quick reference</a>
+        <a class="nav-link${pageId === "process" ? " is-active" : ""}" data-module="process" href="${href(PROCESS_PATH)}"><span class="nav-num">📋</span> Living process</a>
+        <a class="nav-link${pageId === "manager" ? " is-active" : ""}" data-module="manager" href="${href(MANAGER_PATH)}"><span class="nav-num">◇</span> Manager</a>
       </nav>
       <div class="sidebar-footer">
-        <a href="${LIVING_PROCESS_URL}" target="_blank" rel="noopener noreferrer">Living process</a>
+        <a href="${href(PROCESS_PATH)}">Living process</a>
         <a href="${REPO_URL}" target="_blank" rel="noopener noreferrer">Repo</a>
       </div>
     `;

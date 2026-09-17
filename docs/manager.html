@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manager — Grok Build Agents</title>
+  <link rel="icon" href="https://practical-office.github.io/Cursor-AI-dev/assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://practical-office.github.io/Cursor-AI-dev/css/cursor-ai-dev.css" />
+</head>
+<body data-page="manager" data-base="" data-file="manager.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Manager</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="themeToggle">Theme</button>
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+        <section class="hero">
+          <span class="status-chip">Reference · not required for the course</span>
+          <h1>Manager <em>agent</em></h1>
+          <p class="hero-lede">Optional coordination agent for after you have at least two narrow worker agents in separate folders. A Manager routes jobs — it never does the work itself.</p>
+        </section>
+
+        <div class="section-card">
+          <p class="eyebrow">When to use this</p>
+          <ul>
+            <li>You already completed the core course (Modules 1–5).</li>
+            <li>You have two or more narrow agents, each at Trust Stage 1 or higher, each in its own folder.</li>
+            <li>You want one place to decide which agent folder to open for an incoming job.</li>
+          </ul>
+          <p>The core course does not include a Manager build lab. Worker agents still use Plan Mode in their own folders.</p>
+          <p>Full rules: <a href="process.html#manager-agents">Living process — Manager agents</a></p>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Pinned build paste (Grok Build CLI)</p>
+          <p>Create a dedicated Manager folder, <code>cd</code> into it, start <code>grok</code>, and paste:</p>
+          <pre><code>You are my Manager agent. You never do any task yourself. When a job comes in, assign a dedicated sub-agent for that one job. One agent, one lane. Coordinate and report back to me. Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
+        </div>
+
+        <nav class="page-nav no-print" id="pageNav"></nav>
+      </main>
+    </div>
+  </div>
+  <script src="js/grok-build-agents.js"></script>
+</body>
+</html>
