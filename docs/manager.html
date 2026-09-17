@@ -43,8 +43,19 @@
 
         <div class="section-card">
           <p class="eyebrow">Pinned build paste (Grok Build CLI)</p>
-          <p>Create a dedicated Manager folder, <code>cd</code> into it, start <code>grok</code>, and paste:</p>
-          <pre><code>You are my Manager agent. You never do any task yourself. When a job comes in, assign a dedicated sub-agent for that one job. One agent, one lane. Coordinate and report back to me. Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
+          <p>In the terminal (not inside Grok), create a dedicated Manager folder:</p>
+          <pre><code>mkdir -p ~/agents/manager</code></pre>
+          <p>Then open that folder and start Grok:</p>
+          <pre><code>cd ~/agents/manager
+grok</code></pre>
+          <p>Copy the entire block and paste into Grok Build CLI:</p>
+          <pre><code>You are my Manager agent.
+You never do any task yourself.
+When a job comes in, assign a dedicated sub-agent for that one job.
+One agent, one lane.
+Coordinate and report back to me.
+Use Plan Mode.
+Do not make any changes until I approve the plan.</code></pre>
         </div>
 
         <nav class="page-nav no-print" id="pageNav"></nav>
