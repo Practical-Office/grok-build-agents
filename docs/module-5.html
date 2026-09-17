@@ -32,22 +32,21 @@
 
         <div class="section-card">
           <p class="eyebrow">Where you work</p>
-          <p>Open your graduate agent folder from Lab B (example):</p>
+          <p>Open your graduate agent folder from Lab B:</p>
           <pre><code>cd ~/agents/follow-up-helper
 grok</code></pre>
-          <p>Start a <strong>new</strong> <code>grok</code> session for this module.</p>
+          <p>Use the same terminal: exit any old <code>grok</code> if running, <code>cd</code> to <code>~/agents/follow-up-helper</code>, then start a fresh <code>grok</code> session for this module.</p>
         </div>
 
         <div class="section-card">
           <p class="eyebrow">Trust is earned in stages</p>
           <div class="table-wrap">
             <table>
-              <thead><tr><th>Stage</th><th>Agent may</th><th>You must</th></tr></thead>
               <tbody>
-                <tr><td>1</td><td>Propose only</td><td>Approve every step</td></tr>
-                <tr><td>2</td><td>Draft / sort / label</td><td>Review outputs before use</td></tr>
-                <tr><td>3</td><td>Limited pre-approved actions</td><td>Spot-check regularly</td></tr>
-                <tr><td>4</td><td>Recurring / scheduled work</td><td>Monitor results + keep guardrails</td></tr>
+                <tr><td>1</td><td>Propose only — you approve everything</td></tr>
+                <tr><td>2</td><td>Draft / sort — you review before use</td></tr>
+                <tr><td>3</td><td>Limited actions — you spot-check</td></tr>
+                <tr><td>4</td><td>Scheduled work — you monitor</td></tr>
               </tbody>
             </table>
           </div>
@@ -56,13 +55,8 @@ grok</code></pre>
 
         <div class="section-card">
           <p class="eyebrow">Promotion gates (short version)</p>
-          <ul>
-            <li><strong>Stage 1 → 2:</strong> 3 correct plans + outputs in a row</li>
-            <li><strong>Stage 2 → 3:</strong> 5 correct outputs, zero boundary violations</li>
-            <li><strong>Stage 3 → 4:</strong> documented success + no escalations for 2 weeks</li>
-            <li><strong>Stage 4:</strong> explicit approval from team lead</li>
-          </ul>
-          <p>Full table: <a href="https://github.com/Practical-Office/grok-build-agents/blob/main/docs/reference/GROK-BUILD-AGENTS-PROCESS.md#6-trust-stages">living process</a></p>
+          <p><strong>Gates:</strong> 3 good runs → Stage 2 · 5 good outputs, zero violations → Stage 3 · 2 weeks, no escalations → Stage 4 candidate · team lead approval for Stage 4</p>
+          <p>Full table: <a href="process.html#trust-stages">living process — trust stages</a></p>
         </div>
 
         <div class="section-card">
@@ -79,53 +73,52 @@ Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
           <p class="eyebrow">When to ask the AI first</p>
           <p>Use these when the job is clear and the risk is low — you are tightening the same agent, not expanding its power:</p>
           <ul>
-            <li>Plan is long or fuzzy → paste: <code>Simplify the plan. Keep only the minimum steps. Use Plan Mode.</code></li>
+            <li>Plan is long, unclear, too broad, or keeps growing → paste: <code>Simplify the plan. Keep only the minimum steps. Use Plan Mode.</code></li>
             <li>Output is almost right → ask for <strong>one</strong> small fix; reject plans that rewrite everything</li>
-            <li>You forgot a boundary → tell it to update IDENTITY or AGENTS.md; approve only if boundaries get stricter or stay the same</li>
-            <li>Something worked once → run <code>/skillify</code></li>
+            <li>You forgot a boundary → tell it to update IDENTITY or AGENTS.md; approve boundary changes <strong>only if</strong> they add boundaries or tighten existing ones — never if they remove or soften</li>
+            <li>Something worked once → run <code>/skillify</code> (one successful task — trust promotion still uses the gates above)</li>
+            <li>Ask-AI-first is OK for a <strong>small cluster of related fixes in one plan</strong> — escalate if scope grows, access/permissions, or you are unsure</li>
           </ul>
           <p>You must still understand the plan before you approve. “Ask the AI” does not mean “let it run until it looks done.”</p>
         </div>
 
         <div class="hard-truth">
           <h3>When to escalate to a human</h3>
-          <p>Stop the agent. Do not approve. Ask a teammate, team lead, or IT — with the folder path and what you already tried:</p>
+          <p>Stop the agent. Do not approve. Do not keep prompting until it “works.”</p>
           <ul>
-            <li>You cannot explain what the agent is about to do</li>
-            <li>It asks for access, money, client data, or external send you have not approved</li>
-            <li>Outputs look wrong or inconsistent after one clarify attempt</li>
-            <li>The plan keeps growing past one job or one folder</li>
-            <li>Install, sign-in, or permissions fail</li>
-            <li>You feel pressure to “just approve” so you can move on</li>
+            <li>Plan is unclear or too broad (after one clarify attempt)</li>
+            <li>Agent wants access you are not comfortable giving</li>
+            <li>Results look wrong or inconsistent</li>
+            <li>You cannot explain what it is about to do</li>
+            <li>Install or permissions fail</li>
           </ul>
-          <p>Escalate means a <strong>person</strong>, not another AI chat.</p>
+          <p>Stop the agent. Ask a person with the folder path and what you tried.</p>
         </div>
 
         <div class="section-card">
           <p class="eyebrow">Daily habits + after the course</p>
           <ul>
-            <li>Start every non-trivial request with Plan Mode (<code>/plan</code>, Shift+Tab, or the paste sentence).</li>
+            <li>Plan Mode order: (1) say <strong>Use Plan Mode</strong> or paste the sentence, (2) <code>/plan</code>, (3) <strong>Shift+Tab</strong> until on.</li>
             <li>Keep each agent in its own folder.</li>
-            <li>After something works, run <code>/skillify</code>.</li>
+            <li>After something works once, run <code>/skillify</code>.</li>
             <li>Re-read IDENTITY boundaries before expanding power.</li>
             <li>If results drift, tighten the playbook — do not add more power.</li>
             <li><strong>Daily or weekly ritual:</strong> pick one named agent for a recurring job (example: follow-up drafts every morning).</li>
-            <li><strong>On demand:</strong> for other jobs, <code>cd</code> into the right agent folder and start a new <code>grok</code> session.</li>
+            <li><strong>On demand:</strong> <code>cd</code> into the right agent folder (not the practice folder) and start a fresh <code>grok</code> session.</li>
           </ul>
         </div>
 
         <div class="section-card">
-          <p class="eyebrow">Manager agents (later)</p>
-          <p>After you have at least two narrow agents in separate folders, you may later add a Manager that routes jobs to the right folder. A Manager never does the work — you still open the worker folder and use Plan Mode there. The core course does not include a Manager build lab.</p>
+          <p class="eyebrow">Manager agents</p>
+          <p>Optional after the course — see <a href="manager.html">Manager</a> when you have two or more narrow agents.</p>
         </div>
 
         <div class="section-card">
           <p class="eyebrow">Team handoff checklist (use your Lab B agent)</p>
           <ul>
-            <li>Folder: <code>~/agents/follow-up-helper</code> (or your equivalent)</li>
-            <li>aim.md, SOUL.md, IDENTITY.md, USER.md, playbook if any</li>
-            <li>AGENTS.md with Trust Stage 1 noted</li>
-            <li>Show a teammate where it lives, what it may do, and what it must never do</li>
+            <li>Folder: <code>~/agents/follow-up-helper</code></li>
+            <li>Walk your teammate through: Aim (<code>aim.md</code>), identity files, <code>AGENTS.md</code>, and one sample draft</li>
+            <li>Show where it lives on disk and what it may do vs. what it must never do</li>
           </ul>
         </div>
 

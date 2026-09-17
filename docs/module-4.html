@@ -30,12 +30,16 @@
           <p class="hero-lede">Build two small, useful agents in separate folders. Always use Plan Mode inside the Grok Build CLI.</p>
         </section>
 
+        <div class="hard-truth">
+          <p><strong>When to escalate to a human</strong></p>
+        </div>
+
         <div class="section-card">
           <p class="eyebrow">Before you start — create separate folders</p>
           <p>In the terminal (not inside Grok), run:</p>
           <pre><code>mkdir -p ~/agents/daily-tracker
 mkdir -p ~/agents/follow-up-helper</code></pre>
-          <p>Each lab uses its own folder. Do not mix agents. Start a <strong>new</strong> <code>grok</code> session in each lab folder.</p>
+          <p>Each lab uses its own folder. Do not mix agents. Use the same terminal: exit any old <code>grok</code> if running, <code>cd</code> into the lab folder, then start a fresh <code>grok</code> session.</p>
         </div>
 
         <div class="section-card">
@@ -51,7 +55,7 @@ Keep it simple and easy to fill out by hand each day.
 Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
           <ol>
             <li>Approve only if the plan creates that one file with those sections.</li>
-            <li>Open the file and confirm it is usable.</li>
+            <li>Open <code>daily-activity.md</code> and confirm it has sections: Calls, Emails, Meetings, Notes, Top priority for tomorrow.</li>
             <li>Then paste:</li>
           </ol>
           <pre><code>Improve daily-activity.md with one small improvement only (for example clearer section headers).
@@ -82,7 +86,7 @@ Create these files:
 
 Ask me any clarifying questions first.
 Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
-          <p>Read the plan. Approve only if it creates those files and nothing outside this folder. Open each file and confirm boundaries are explicit.</p>
+          <p>Read the plan. Approve only if it creates those files and nothing outside this folder. Open each file and confirm <code>IDENTITY.md</code> states draft-only boundaries and no access outside this folder.</p>
           <p><strong>Step 2 — test with a non-sensitive example:</strong></p>
           <pre><code>Using the follow-up helper rules, draft a message from these notes:
 - Met with Alex about project timeline
@@ -97,7 +101,7 @@ Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
           <p class="eyebrow">Best practices while building</p>
           <ul>
             <li>One change at a time.</li>
-            <li>Always re-state “Use Plan Mode” on new requests.</li>
+            <li>Plan Mode order on new requests: (1) say <strong>Use Plan Mode</strong> or paste the sentence, (2) <code>/plan</code>, (3) <strong>Shift+Tab</strong> until on.</li>
             <li>If the plan is long or unclear, paste: <code>Simplify the plan. Keep only the minimum steps. Use Plan Mode.</code></li>
             <li>Keep each agent in its own folder.</li>
           </ul>

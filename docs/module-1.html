@@ -33,6 +33,7 @@
         <div class="hard-truth">
           <h3>Non-negotiable rule</h3>
           <p>For any non-trivial work, always tell Grok to use <strong>Plan Mode</strong>. Do not let it change files until you have read and approved the plan.</p>
+          <p><strong>When to escalate to a human</strong></p>
         </div>
 
         <div class="section-card">
@@ -46,7 +47,7 @@
             <li>Start Grok:</li>
           </ol>
           <pre><code>grok</code></pre>
-          <p>Start a <strong>new</strong> <code>grok</code> session for this module. All prompts below are pasted <strong>inside the Grok Build CLI</strong>.</p>
+          <p>Use the same terminal: exit any old <code>grok</code> if running, <code>cd</code> to <code>~/grok-practice</code>, then start a fresh <code>grok</code> session for this module. All prompts below are pasted <strong>inside the Grok Build CLI</strong> (the chat window where you type to Grok).</p>
         </div>
 
         <div class="section-card">
@@ -64,7 +65,7 @@
                 <tr><td>2</td><td>Never approve a plan you do not understand.</td></tr>
                 <tr><td>3</td><td>One agent = one clear job (narrow scope).</td></tr>
                 <tr><td>4</td><td>Do not give access to money, client data, or external systems until proven reliable.</td></tr>
-                <tr><td>5</td><td>If unsure, stop and ask. Do not let the agent guess.</td></tr>
+                <tr><td>5</td><td>If unsure, stop and ask a human. Do not let the agent guess.</td></tr>
                 <tr><td>6</td><td>Capture good results with <code>/skillify</code>.</td></tr>
               </tbody>
             </table>
@@ -73,9 +74,9 @@
 
         <div class="section-card">
           <h3>How to force Plan Mode every time</h3>
-          <p>Paste this sentence at the end of every real request (inside Grok Build CLI):</p>
+          <p>Use this order: (1) say <strong>Use Plan Mode</strong> or paste this sentence at the end of every real request (inside Grok Build CLI):</p>
           <pre><code>Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
-          <p>Or type <code>/plan</code>, or press <strong>Shift+Tab</strong> until Plan Mode is active.</p>
+          <p>(2) Type <code>/plan</code>, or (3) press <strong>Shift+Tab</strong> until Plan Mode is active.</p>
           <p>After you approve a plan, Grok may leave Plan Mode to execute. Return to Plan Mode before your next request.</p>
         </div>
 
@@ -100,7 +101,7 @@ Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
           <ol>
             <li>Read the plan. Confirm it only creates <code>daily-habits.md</code>.</li>
             <li>Approve only if the scope is limited.</li>
-            <li>After it runs, open the file and confirm the 5 habits exist.</li>
+            <li>After it runs, open <code>daily-habits.md</code> and confirm it lists exactly 5 habits.</li>
           </ol>
         </div>
 

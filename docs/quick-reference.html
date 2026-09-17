@@ -41,7 +41,7 @@
           <p class="eyebrow">Start a session (terminal)</p>
           <pre><code>cd ~/agents/your-agent-name
 grok</code></pre>
-          <p>New <code>grok</code> session per agent folder.</p>
+          <p>Use the same terminal: exit any old <code>grok</code> if running, <code>cd</code> to the <strong>right folder</strong> (that agent’s folder, not the practice folder), then start a fresh <code>grok</code> session. A second terminal is fine if you prefer.</p>
         </div>
 
         <div class="section-card">
@@ -100,20 +100,22 @@ grok</code></pre>
             </table>
           </div>
           <p><strong>Gates:</strong> 3 good runs → Stage 2 · 5 good outputs, zero violations → Stage 3 · 2 weeks, no escalations → Stage 4 candidate · team lead approval for Stage 4</p>
+          <p><strong>Stage 3 short log:</strong> while at Stage 3, write a short spot-check note with the agent (agent folder / <code>AGENTS.md</code>) — date, what you checked, pass/fail.</p>
         </div>
 
         <div class="section-card">
           <p class="eyebrow">Ask the AI first</p>
           <ul>
-            <li>Long plan → <code>Simplify the plan. Keep only the minimum steps. Use Plan Mode.</code></li>
+            <li>Long or unclear plan (too broad or keeps growing) → <code>Simplify the plan. Keep only the minimum steps. Use Plan Mode.</code></li>
             <li>Almost right → one small fix only</li>
-            <li>Missing boundary → update IDENTITY or AGENTS.md</li>
-            <li>Worked once → <code>/skillify</code></li>
+            <li>Missing boundary → update IDENTITY or AGENTS.md; approve only if boundaries get stricter or stay the same</li>
+            <li>Worked once → <code>/skillify</code> (one successful task — not a streak)</li>
+            <li>Small cluster of related fixes in one plan is OK — escalate if scope grows, access/permissions, or unsure</li>
           </ul>
         </div>
 
         <div class="hard-truth">
-          <h3>Escalate to a human if</h3>
+          <h3>When to escalate to a human</h3>
           <ul>
             <li>Plan is unclear or too broad (after one clarify attempt)</li>
             <li>Agent wants access you are not comfortable giving</li>
@@ -129,7 +131,7 @@ grok</code></pre>
           <ul>
             <li><strong>Ritual:</strong> one named agent for a recurring daily or weekly job</li>
             <li><strong>On demand:</strong> <code>cd</code> to the right folder, new <code>grok</code> session</li>
-            <li><strong>Manager (later):</strong> routes to agent folders only — never does the work</li>
+            <li><strong>Manager:</strong> <a href="manager.html">optional coordination agent</a> — routes to agent folders only; never does the work</li>
           </ul>
         </div>
 

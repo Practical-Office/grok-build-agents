@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Living Process — Grok Build Agents</title>
+  <link rel="icon" href="https://practical-office.github.io/Cursor-AI-dev/assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://practical-office.github.io/Cursor-AI-dev/css/cursor-ai-dev.css" />
+</head>
+<body data-page="process" data-base="" data-file="process.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Living process</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="themeToggle">Theme</button>
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+        <section class="hero">
+          <span class="status-chip">Living source of truth · v2.4</span>
+          <h1>Grok Build Agents — <em>Living Process</em></h1>
+          <p class="hero-lede">How the team builds and runs agents with Grok Build. Course modules follow this document. Edit source: <code>docs/reference/GROK-BUILD-AGENTS-PROCESS.md</code> in the repo.</p>
+        </section>
+
+        <div class="section-card" id="goals">
+          <p class="eyebrow">1. Goals</p>
+          <ul>
+            <li>Give every team member a safe, repeatable way to build basic agents.</li>
+            <li>Prevent uncontrolled or overly broad agents.</li>
+            <li>Make Plan Mode and human approval non-negotiable.</li>
+            <li>Capture useful work as reusable Skills.</li>
+            <li>Keep every agent narrow (one job per agent).</li>
+          </ul>
+        </div>
+
+        <div class="section-card" id="audience">
+          <p class="eyebrow">2. Audience</p>
+          <p>Anyone on the team who needs to build or run basic agents — Sales, Support, Ops, or Engineering. Steps are written so people with little technical background can follow them. No coding knowledge is required.</p>
+        </div>
+
+        <div class="section-card" id="agent-framework">
+          <p class="eyebrow">3. Core framework: AGENT</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Letter</th><th>Meaning</th><th>What to do</th></tr></thead>
+              <tbody>
+                <tr><td><strong>A</strong></td><td>Aim</td><td>State the outcome in one clear sentence + a Definition of Done</td></tr>
+                <tr><td><strong>G</strong></td><td>Give identity</td><td>Create SOUL, IDENTITY, and USER files (let Grok write them under Plan Mode)</td></tr>
+                <tr><td><strong>E</strong></td><td>Equip</td><td>Give context, tools, and short playbooks</td></tr>
+                <tr><td><strong>N</strong></td><td>Narrow</td><td>One agent = one lane. A Manager coordinates only when you already have two or more narrow agents — it never does the work itself</td></tr>
+                <tr><td><strong>T</strong></td><td>Trust</td><td>Grant autonomy in stages. Never full freedom on day one</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="section-card" id="hard-rules">
+          <p class="eyebrow">4. Hard rules (team-wide)</p>
+          <ol>
+            <li>Always start non-trivial work in Plan Mode.</li>
+            <li>Never approve a plan you do not understand.</li>
+            <li>Keep each agent to a single clear job.</li>
+            <li>Do not give an agent access to money, client data, or external systems until it has proven reliable on safer tasks.</li>
+            <li>If you are unsure, stop and ask a human. Do not let the agent guess.</li>
+            <li>Capture good results with <code>/skillify</code> so the team can reuse them.</li>
+          </ol>
+        </div>
+
+        <div class="section-card" id="standard-workflow">
+          <p class="eyebrow">5. Standard workflow</p>
+          <ol>
+            <li>Create a dedicated folder for the agent (example: <code>~/agents/inbox-helper/</code>).</li>
+            <li>In the <strong>same terminal</strong>, exit any old <code>grok</code> session if one is running. <code>cd</code> into this module’s folder or the agent’s folder, then start a fresh <code>grok</code> session. Use a second terminal only if you prefer.</li>
+            <li>Inside the <strong>Grok Build CLI</strong> (the chat window where you type to Grok), paste your goal and end with: <code>Use Plan Mode. Do not make any changes until I approve the plan.</code> To enter Plan Mode: (1) say <strong>Use Plan Mode</strong> or paste that sentence, (2) type <code>/plan</code>, or (3) press <strong>Shift+Tab</strong> until Plan Mode is on.</li>
+            <li>Read the plan carefully. Approve only if every step is clear and safe.</li>
+            <li>Let Grok execute. Return to Plan Mode before your next request.</li>
+            <li>Test against the Definition of Done.</li>
+            <li>If useful, run <code>/skillify</code> after <strong>one successful task</strong> (no streak required for skillify).</li>
+            <li>Write or update <code>AGENTS.md</code> with boundaries and trust stage (via Plan Mode).</li>
+          </ol>
+        </div>
+
+        <div class="section-card" id="trust-stages">
+          <p class="eyebrow">6. Trust stages</p>
+          <div class="table-wrap">
+            <table>
+              <tbody>
+                <tr><td>1</td><td>Propose only — you approve everything</td></tr>
+                <tr><td>2</td><td>Draft / sort — you review before use</td></tr>
+                <tr><td>3</td><td>Limited actions — you spot-check</td></tr>
+                <tr><td>4</td><td>Scheduled work — you monitor</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Promotion gates:</strong> 3 good runs → Stage 2 · 5 good outputs, zero violations → Stage 3 · 2 weeks, no escalations → Stage 4 candidate · team lead approval for Stage 4</p>
+          <p>Never jump from Stage 1 to Stage 4. Most team agents stay at Stage 2 or 3 for a long time.</p>
+          <p><strong>Stage 3 short log (how-to):</strong> While at Stage 3, keep a short spot-check note with the agent (in the agent folder / <code>AGENTS.md</code>). Each entry: date; what you spot-checked; pass or fail (one line each is enough).</p>
+          <p>Short table on <a href="quick-reference.html">Quick reference</a>.</p>
+        </div>
+
+        <div class="section-card" id="ask-ai-first">
+          <p class="eyebrow">7. When to ask the AI first</p>
+          <ul>
+            <li>Plan is long, unclear, too broad, or keeps growing → <code>Simplify the plan. Keep only the minimum steps. Use Plan Mode.</code> Escalate if scope grows, access/permissions are involved, or you are unsure.</li>
+            <li>Output is almost right → one small fix only; reject plans that rewrite everything</li>
+            <li>Missing boundary → update IDENTITY or AGENTS.md; approve boundary changes <strong>only if</strong> they add boundaries or tighten existing ones — never if they remove or soften</li>
+            <li>Something worked once → <code>/skillify</code> (one successful task is enough; trust promotion still uses the gates above)</li>
+          </ul>
+          <p>Ask-AI-first is OK for a <strong>small cluster of related fixes in one plan</strong>. Escalate if scope grows, access/permissions are involved, or you are unsure.</p>
+          <p>You must still understand the plan before you approve.</p>
+        </div>
+
+        <div class="hard-truth" id="escalate">
+          <h3>When to escalate to a human</h3>
+          <p>Stop the agent. Do not approve. Do not keep prompting until it “works.”</p>
+          <ul>
+            <li>Plan is unclear or too broad (after one clarify attempt)</li>
+            <li>Agent wants access you are not comfortable giving</li>
+            <li>Results look wrong or inconsistent</li>
+            <li>You cannot explain what it is about to do</li>
+            <li>Install or permissions fail</li>
+          </ul>
+          <p>Stop the agent. Ask a person with the folder path and what you tried.</p>
+        </div>
+
+        <div class="section-card" id="artifacts">
+          <p class="eyebrow">9. Required artifacts</p>
+          <ul>
+            <li>Aim + Definition of Done</li>
+            <li>SOUL.md, IDENTITY.md, USER.md</li>
+            <li>AGENTS.md with rules, boundaries, trust stage, stop conditions</li>
+            <li>Folder that contains only that agent’s work</li>
+          </ul>
+        </div>
+
+        <div class="section-card" id="after-agents">
+          <p class="eyebrow">10. After you have agents</p>
+          <ul>
+            <li><strong>Ritual:</strong> one named agent for a recurring job — open that folder, <code>grok</code>, Plan Mode.</li>
+            <li><strong>On demand:</strong> <code>cd</code> into the <strong>right folder</strong> (that agent’s folder, not the practice folder); new <code>grok</code> session.</li>
+            <li><strong>New session:</strong> same terminal; exit old <code>grok</code> if running; <code>cd</code> to the agent’s or module’s folder; fresh <code>grok</code>. Second terminal OK if you prefer.</li>
+          </ul>
+        </div>
+
+        <div class="section-card" id="manager-agents">
+          <p class="eyebrow">11. Manager agents (later)</p>
+          <p>A Manager agent coordinates only — <strong>never</strong> for doing tasks. When allowed: at least two narrow worker agents at Trust Stage 1+, each in its own folder.</p>
+          <p>Learners: pinned build paste on <a href="manager.html">Manager</a>. The core course does not include a Manager build lab.</p>
+        </div>
+
+        <div class="section-card" id="updating">
+          <p class="eyebrow">12. Updating this document</p>
+          <p>Propose changes via a ticket. Course modules must be updated after this process document changes — never the other way around.</p>
+          <p><strong>Exception (2026-09-17 course clarity PR):</strong> trust and escalation wording were copied from Quick Reference into this document so learners saw one story. After that merge, this document is master again; Quick Reference should follow it for those topics.</p>
+        </div>
+
+        <nav class="page-nav no-print" id="pageNav"></nav>
+      </main>
+    </div>
+  </div>
+  <script src="js/grok-build-agents.js"></script>
+</body>
+</html>
