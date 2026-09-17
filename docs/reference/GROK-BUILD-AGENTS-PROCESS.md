@@ -120,7 +120,7 @@ A Manager agent is for coordination only — **never** for doing tasks.
 
 **What it does not do:** execute work, merge agents into one mega-agent, or skip Plan Mode in worker folders.
 
-The core course does not include a Manager build lab. Learners: see [Manager](../manager.html) on the course site for the pinned build paste. See the team backlog for a future optional module.
+The core course does not include a Manager build lab. Learners: see [Manager](../manager.html) on the course site for pastable terminal steps (create folder, `cd`, start `grok`) and the pinned multi-line Manager prompt. See the team backlog for a future optional module.
 
 ## 12. Updating This Document
 
