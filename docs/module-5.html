@@ -25,16 +25,17 @@
       </header>
       <main class="content" id="top">
         <section class="hero">
-          <span class="status-chip">Module 5 of 5 · ~30 min</span>
+          <span class="status-chip">Module 5 of 5 · ~20–25 min</span>
           <h1>Trust Stages + <em>Daily Habits</em></h1>
           <p class="hero-lede">Building the agent is the easy part. Knowing when to trust it is the hard part. Record the stage inside the agent folder via Grok Build CLI.</p>
         </section>
 
         <div class="section-card">
           <p class="eyebrow">Where you work</p>
-          <p>Open the folder for the agent you built (example):</p>
+          <p>Open your graduate agent folder from Lab B (example):</p>
           <pre><code>cd ~/agents/follow-up-helper
 grok</code></pre>
+          <p>Start a <strong>new</strong> <code>grok</code> session for this module.</p>
         </div>
 
         <div class="section-card">
@@ -54,6 +55,17 @@ grok</code></pre>
         </div>
 
         <div class="section-card">
+          <p class="eyebrow">Promotion gates (short version)</p>
+          <ul>
+            <li><strong>Stage 1 → 2:</strong> 3 correct plans + outputs in a row</li>
+            <li><strong>Stage 2 → 3:</strong> 5 correct outputs, zero boundary violations</li>
+            <li><strong>Stage 3 → 4:</strong> documented success + no escalations for 2 weeks</li>
+            <li><strong>Stage 4:</strong> explicit approval from team lead</li>
+          </ul>
+          <p>Full table: <a href="https://github.com/Practical-Office/grok-build-agents/blob/main/docs/reference/GROK-BUILD-AGENTS-PROCESS.md#6-trust-stages">living process</a></p>
+        </div>
+
+        <div class="section-card">
           <h3>Record trust stage — paste into Grok Build CLI</h3>
           <pre><code>Update AGENTS.md (or create it) so it clearly states:
 - Current Trust Stage: 1
@@ -64,40 +76,63 @@ Use Plan Mode. Do not make any changes until I approve the plan.</code></pre>
         </div>
 
         <div class="section-card">
-          <p class="eyebrow">Daily habits</p>
+          <p class="eyebrow">When to ask the AI first</p>
+          <p>Use these when the job is clear and the risk is low — you are tightening the same agent, not expanding its power:</p>
           <ul>
-            <li>Start every non-trivial request with Plan Mode.</li>
+            <li>Plan is long or fuzzy → paste: <code>Simplify the plan. Keep only the minimum steps. Use Plan Mode.</code></li>
+            <li>Output is almost right → ask for <strong>one</strong> small fix; reject plans that rewrite everything</li>
+            <li>You forgot a boundary → tell it to update IDENTITY or AGENTS.md; approve only if boundaries get stricter or stay the same</li>
+            <li>Something worked once → run <code>/skillify</code></li>
+          </ul>
+          <p>You must still understand the plan before you approve. “Ask the AI” does not mean “let it run until it looks done.”</p>
+        </div>
+
+        <div class="hard-truth">
+          <h3>When to escalate to a human</h3>
+          <p>Stop the agent. Do not approve. Ask a teammate, team lead, or IT — with the folder path and what you already tried:</p>
+          <ul>
+            <li>You cannot explain what the agent is about to do</li>
+            <li>It asks for access, money, client data, or external send you have not approved</li>
+            <li>Outputs look wrong or inconsistent after one clarify attempt</li>
+            <li>The plan keeps growing past one job or one folder</li>
+            <li>Install, sign-in, or permissions fail</li>
+            <li>You feel pressure to “just approve” so you can move on</li>
+          </ul>
+          <p>Escalate means a <strong>person</strong>, not another AI chat.</p>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Daily habits + after the course</p>
+          <ul>
+            <li>Start every non-trivial request with Plan Mode (<code>/plan</code>, Shift+Tab, or the paste sentence).</li>
             <li>Keep each agent in its own folder.</li>
             <li>After something works, run <code>/skillify</code>.</li>
             <li>Re-read IDENTITY boundaries before expanding power.</li>
             <li>If results drift, tighten the playbook — do not add more power.</li>
-          </ul>
-        </div>
-
-        <div class="hard-truth">
-          <h3>Stop and escalate if</h3>
-          <ul>
-            <li>The plan is unclear or too broad</li>
-            <li>The agent asks for access you are not comfortable giving</li>
-            <li>Outputs look wrong or inconsistent</li>
-            <li>You cannot explain what the agent is about to do</li>
+            <li><strong>Daily or weekly ritual:</strong> pick one named agent for a recurring job (example: follow-up drafts every morning).</li>
+            <li><strong>On demand:</strong> for other jobs, <code>cd</code> into the right agent folder and start a new <code>grok</code> session.</li>
           </ul>
         </div>
 
         <div class="section-card">
-          <p class="eyebrow">Team handoff checklist</p>
+          <p class="eyebrow">Manager agents (later)</p>
+          <p>After you have at least two narrow agents in separate folders, you may later add a Manager that routes jobs to the right folder. A Manager never does the work — you still open the worker folder and use Plan Mode there. The core course does not include a Manager build lab.</p>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Team handoff checklist (use your Lab B agent)</p>
           <ul>
-            <li>Clearly named folder (example: <code>~/agents/follow-up-helper</code>)</li>
-            <li>Aim, Definition of Done, identity files, playbook</li>
-            <li>Current Trust Stage noted in AGENTS.md</li>
-            <li>Show a teammate where it lives and what it may do</li>
+            <li>Folder: <code>~/agents/follow-up-helper</code> (or your equivalent)</li>
+            <li>aim.md, SOUL.md, IDENTITY.md, USER.md, playbook if any</li>
+            <li>AGENTS.md with Trust Stage 1 noted</li>
+            <li>Show a teammate where it lives, what it may do, and what it must never do</li>
           </ul>
         </div>
 
         <div class="section-card checklist">
           <p class="eyebrow">Success checklist (must complete)</p>
-            <label class="check-row"><input type="checkbox" data-progress="m5-c1" /> Trust Stage documented for one agent</label>
-            <label class="check-row"><input type="checkbox" data-progress="m5-c2" /> Walked a teammate through safe use</label>
+            <label class="check-row"><input type="checkbox" data-progress="m5-c1" /> AGENTS.md in follow-up-helper records Trust Stage 1 and stop conditions</label>
+            <label class="check-row"><input type="checkbox" data-progress="m5-c2" /> Walked a teammate through safe use of the Lab B agent</label>
         </div>
         <nav class="page-nav no-print" id="pageNav"></nav>
       </main>

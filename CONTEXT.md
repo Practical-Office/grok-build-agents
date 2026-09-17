@@ -14,7 +14,7 @@ Team members with little to no technical background (Sales, Support, Ops) and te
 2. **One agent, one lane** — keep scope narrow.
 3. **Human remains in control** — trust is earned in stages.
 4. **Capture what works** — turn good results into Skills.
-5. **Stop when unsure** — escalate instead of guessing.
+5. **Stop when unsure** — ask the AI to clarify when safe; escalate to a human when not.
 
 ## Source of truth
 

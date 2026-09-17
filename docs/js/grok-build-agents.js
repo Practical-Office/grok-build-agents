@@ -3,14 +3,14 @@
   const THEME_KEY = "grok-build-agents-theme";
 
   const MODULES = [
-    { id: "module-1", href: "module-1.html", num: "1", label: "Safety + Plan Mode", meta: "30m" },
-    { id: "module-2", href: "module-2.html", num: "2", label: "Aim + Identity", meta: "35m" },
-    { id: "module-3", href: "module-3.html", num: "3", label: "Equip + Narrow", meta: "30m" },
+    { id: "module-1", href: "module-1.html", num: "1", label: "Safety + Plan Mode", meta: "10–15m" },
+    { id: "module-2", href: "module-2.html", num: "2", label: "Aim + Identity", meta: "20–25m" },
+    { id: "module-3", href: "module-3.html", num: "3", label: "Equip + Narrow", meta: "20–25m" },
     { id: "module-4", href: "module-4.html", num: "4", label: "First Agents (Labs)", meta: "60–90m" },
-    { id: "module-5", href: "module-5.html", num: "5", label: "Trust + Habits", meta: "30m" },
+    { id: "module-5", href: "module-5.html", num: "5", label: "Trust + Habits", meta: "20–25m" },
   ];
 
-  const SETUP = { id: "setup", href: "setup.html", num: "⚙", label: "Setup", meta: "25–35m" };
+  const SETUP = { id: "setup", href: "setup.html", num: "⚙", label: "Setup", meta: "20–30m" };
 
   const PROGRESS_IDS = [
     "setup-c1", "setup-c2", "setup-c3", "setup-c4",
@@ -112,10 +112,11 @@
         <p class="nav-section-label">Start</p>
         <a class="nav-link" href="${HUB_URL}"><span class="nav-num">←</span> Back to hub</a>
         <a class="nav-link${pageId === "hub" ? " is-active" : ""}" data-module="hub" href="${href("index.html")}"><span class="nav-num">⌂</span> Course hub</a>
-        <a class="nav-link${pageId === "quick-reference" ? " is-active" : ""}" data-module="quick-reference" href="${href("quick-reference.html")}"><span class="nav-num">⚡</span> Quick reference</a>
         <a class="nav-link${pageId === SETUP.id ? " is-active" : ""}" data-module="${SETUP.id}" href="${href(SETUP.href)}"><span class="nav-num">${SETUP.num}</span> ${SETUP.label} <span class="nav-meta">${SETUP.meta}</span></a>
         <p class="nav-section-label">Modules</p>
         ${moduleLinks}
+        <p class="nav-section-label">Reference</p>
+        <a class="nav-link${pageId === "quick-reference" ? " is-active" : ""}" data-module="quick-reference" href="${href("quick-reference.html")}"><span class="nav-num">⚡</span> Quick reference</a>
       </nav>
       <div class="sidebar-footer">
         <a href="${LIVING_PROCESS_URL}" target="_blank" rel="noopener noreferrer">Living process</a>
